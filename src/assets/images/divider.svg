@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="divider_inner" data-figma-trr="r5u0-0f">
+<rect x="14.1289" y="0.109375" width="3.7422" height="31.7804" fill="#FFFAEB"/>
+</g>
+<use xlink:href="#divider_inner" transform="translate(26.2725 -4.16137) rotate(72)"/>
+<use xlink:href="#divider_inner" transform="translate(38.3488 19.5393) rotate(144)"/>
+<use xlink:href="#divider_inner" transform="translate(19.5399 38.3485) rotate(-144)"/>
+<use xlink:href="#divider_inner" transform="translate(-4.16095 26.2725) rotate(-72)"/>
+</svg>

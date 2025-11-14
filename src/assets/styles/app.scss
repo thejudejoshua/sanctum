@@ -1,0 +1,117 @@
+@use "variables/type";
+@use "variables/colors";
+@use "variables/spacings";
+
+@use "components/navbar";
+@use "components/button";
+@use "components/footer";
+@use "components/form";
+
+@use "pages/home";
+
+@use "general";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	//cursor: none !important;
+}
+
+
+video,
+img,
+svg,
+canvas {
+	pointer-events: none;
+	object-fit: cover;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 0;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--darkgrey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--lightgrey);
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: var(--neutral);
+	background: var(--primary);
+}
+
+::selection {
+	color: var(--black);
+	background: var(--primary);
+}
+
+
+html, body {
+	font-size: var(--font-size);
+	font-family: var(--font-family), sans-serif;
+	scroll-behavior: smooth;
+	min-height: 100vh;
+	background-color: var(--black);
+	color: var(--white);
+	max-width: var(--responsiveness-container_width);
+	width: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+
+.h1 {
+	@include type.h1;
+}
+
+.h2 {
+	@include type.h2;
+}
+
+.h3 {
+	@include type.h3;
+}
+
+.h4 {
+	@include type.h4;
+}
+
+.h5 {
+	@include type.h5;
+}
+
+.h6 {
+	@include type.h6;
+}
+
+.t-copy {
+	@include type.t-copy;
+}
+
+.t-highlights {
+	@include type.t-highlights;
+	color: var(--lightgrey);
+}
+
+.t-links {
+	@include type.t-links;
+}

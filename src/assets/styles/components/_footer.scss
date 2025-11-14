@@ -1,0 +1,31 @@
+.newsletter{
+	&-background-element{
+		position: absolute;
+		top: unset;
+		bottom: 0;
+		opacity: 0.7;
+		left: -16%;
+	}
+
+	&-data{
+		width: 64%;
+		gap: var(--gap-xl);
+
+		& form{
+			flex-direction: row;
+		}
+	}
+}
+
+.footer{
+	& .copyright{
+		padding-top: var(--padding-xl-2);
+		border-top: var(--border-thin) solid var(--lightgrey);
+
+		&-text{
+			& .t-highlights{
+				color: var(--white);
+			}
+		}
+	}
+}

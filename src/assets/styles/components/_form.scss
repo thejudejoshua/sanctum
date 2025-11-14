@@ -1,0 +1,17 @@
+.form{
+	gap: var(--gap-xxs);
+	width: 100%;
+
+	&-input-holder{
+		width: 100%;
+
+		input, textarea, select {
+			border: var(--border-thin) solid var(--white);
+			background-color: transparent;
+			width: 100%;
+			padding: 0.8rem var(--padding-lg);
+			text-transform: unset;
+			font-weight: 400;
+		}
+	}
+}

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Main";
+    src: local("inter"),
+    url("/src/assets/fonts/inter.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+	--font-size: 20px;
+	--font-family: "Main", sans-serif;
+
+	--spacing-heading-1: -0.1875rem;    // -3px
+	--spacing-heading-2: -0.125rem;   // -2px
+	--spacing-heading-3: -0.09375rem;   // -1.5px
+	--spacing-heading-4: -0.0625rem;    // -1px
+	--spacing-heading-5: -0.0625rem;    // -1px
+	--spacing-heading-6: -0.0625rem;    // -1px
+	--spacing-copy: -0.03125rem;         // -0.5px
+}
+
+// -----------------------
+// Headings
+// -----------------------
+@mixin h1($size: 4.77rem) { // 76.3px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 120%;
+	font-size: clamp(3.5rem, 5.5vw, $size);  // responsive
+	letter-spacing: var(--spacing-heading-1);
+}
+
+@mixin h2($size: 3.82rem) { // 61px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 140%;
+	font-size: clamp(3rem, 4.5vw, $size);
+	letter-spacing: var(--spacing-heading-2);
+}
+
+@mixin h3($size: 3.05rem) { // 48.83px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 130%;
+	font-size: clamp(2.5rem, 3.7vw, $size);
+	letter-spacing: var(--spacing-heading-3);
+}
+
+@mixin h4($size: 2.44rem) { // 39.06px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 130%;
+	font-size: clamp(2rem, 3.2vw, $size);
+	letter-spacing: var(--spacing-heading-4);
+}
+
+@mixin h5($size: 1.95rem) { // 31.25px
+	font-family: "Main", sans-serif;
+	font-weight: 400;
+	line-height: 140%;
+	font-size: clamp(1.75rem, 2.5vw, $size);
+	letter-spacing: var(--spacing-heading-5);
+}
+
+@mixin h6($size: 1.563rem) { // 25px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 135%;
+	font-size: clamp(1.5rem, 2vw, $size);
+	letter-spacing: var(--spacing-heading-6);
+}
+
+// -----------------------
+// Copy / Body Text
+// -----------------------
+@mixin t-copy($size: 1.125rem) { // 20px
+	font-family: "Main", sans-serif;
+	font-weight: 300;
+	line-height: 160%;
+	white-space: pre-line;
+	font-size: clamp(1.125rem, 1vw, $size);
+	letter-spacing: var(--spacing-copy);
+}
+
+@mixin t-highlights($size: 0.8125rem) { //16px
+	font-family: "Main", sans-serif;
+	font-weight: 400;
+	line-height: 160%;
+	white-space: pre-line;
+	font-size: clamp(0.8125rem, 1vw, $size);
+	letter-spacing: var(--spacing-copy);
+	text-transform: uppercase;
+}
+
+@mixin t-links($size: 0.75rem) { //15px
+	font-family: "Main", sans-serif;
+	font-weight: 500;
+	line-height: 130%;
+	font-size: clamp(0.75rem, 1vw, $size);
+	letter-spacing: var(--spacing-copy);
+	text-transform: uppercase;
+}

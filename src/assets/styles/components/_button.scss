@@ -1,0 +1,21 @@
+.button{
+	gap: var(--gap-xxs);
+	padding: var(--padding-button) var(--padding-lg);
+	font-weight: 600 !important;
+	text-wrap: nowrap;
+	width: fit-content;
+
+	&.primary{
+		background-color: var(--primary);
+		color: var(--black);
+	}
+
+	&.secondary{
+		background-color: var(--black);
+		border: var(--border-thin) solid var(--white);
+	}
+
+	& svg{
+		font-size: 1.1rem;
+	}
+}

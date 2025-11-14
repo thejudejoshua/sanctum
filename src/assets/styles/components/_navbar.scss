@@ -1,0 +1,40 @@
+.navbar {
+	position: fixed;
+	z-index: 10000;
+	background: var(--black);
+	padding: var(--padding-lg) var(--padding-xl-2);
+	//max-width: var(--container-width);
+	width: 100%;
+	top: 0;
+	border-bottom: var(--border-thin) solid var(--lightgrey);
+
+	&-logo{
+		& img{
+			height: 27px;
+			width: auto;
+		}
+	}
+
+	&-links{
+		gap: var(--gap-md);
+
+		& .active{
+			color: var(--primary);
+			opacity: 0.6;
+			pointer-events: none;
+
+			&::after{
+				content: "";
+				width: 110%;
+				height: 2px;
+				display: inline-block;
+				position: absolute;
+				top: 30%;
+				bottom: 50%;
+				left: -5%;
+				background: var(--primary);
+			}
+		}
+	}
+
+}
