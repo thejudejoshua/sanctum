@@ -1,24 +1,20 @@
 import Button from "./Button.jsx";
 import InputComponent from "./InputComponent.jsx";
 
-export default function FormComponent ({input, submitLabel, icon}){
-	
-	return(
-		
-		<form className="form flex flex-col justify-start items-start">
-			{/* Generate Inputs */}
-			{input.map((type, index) => (
-				<div
-					key={index}
-					className="form-input-holder"
-				>
-					<InputComponent type={input}/>
-				</div>
-			))}
+export default function FormComponent({ input, submitLabel, icon }) {
+	return (
+		<form className="form flex flex-col">
+			<div className="form-input-holder flex flex-col">
+				{input.map((field, index) => {
+					return (
+						<InputComponent required={field.required} key={index} type={field.type} placeholder={field.placeholder} options={field.options}/>
+					)
+				})}
+			</div>
 			
-			<Button label={submitLabel} direction={''} hierarchy={'primary'}>
+			<Button label={submitLabel} direction="" hierarchy="primary">
 				{icon}
 			</Button>
 		</form>
-	)
+	);
 }

@@ -15,6 +15,14 @@
 		border: var(--border-thin) solid var(--white);
 	}
 
+	&.tertiary{
+		padding: 0;
+
+		&:hover{
+			color: var(--secondary);
+		}
+	}
+
 	& svg{
 		font-size: 1.1rem;
 	}

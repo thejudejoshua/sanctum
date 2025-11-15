@@ -9,9 +9,14 @@
 			border: var(--border-thin) solid var(--white);
 			background-color: transparent;
 			width: 100%;
-			padding: 0.8rem var(--padding-lg);
+			padding: 0.8rem var(--padding-md);
 			text-transform: unset;
 			font-weight: 400;
+			resize: none;
+		}
+
+		textarea{
+			height: 200px;
 		}
 	}
 }

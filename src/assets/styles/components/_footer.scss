@@ -18,6 +18,28 @@
 }
 
 .footer{
+	gap: var(--gap-xl);
+	padding-bottom: var(--padding-xl-2);
+
+	&-info{
+		&-logo{
+			width: 190px;
+			height: 24px;
+		}
+	}
+	&-links{
+		gap: var(--gap-md);
+
+		&-list-holder{
+			gap: var(--gap-lg);
+
+			& .links-list{
+				gap: var(--gap-md);
+				justify-content: space-between;
+			}
+		}
+	}
+
 	& .copyright{
 		padding-top: var(--padding-xl-2);
 		border-top: var(--border-thin) solid var(--lightgrey);

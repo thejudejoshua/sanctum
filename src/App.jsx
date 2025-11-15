@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 
 import {BodyClass} from "./hooks/bodyClass.jsx";
+import ScrollToTop from "./hooks/ScrollToTop.jsx";
 
 function App() {
 	
@@ -15,6 +16,8 @@ function App() {
 	
 	return (
 		<>
+			<ScrollToTop />
+			
 			<Navbar/>
 			
 			<Routes>

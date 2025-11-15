@@ -8,4 +8,13 @@ export default defineConfig({
     plugins: [
         react(), svgr(), tailwindcss()
     ],
+    build: {
+        rollupOptions: {},
+    },
+    server: {
+        historyApiFallback: true,
+    },
+    preview: {
+        historyApiFallback: true,
+    }
 })

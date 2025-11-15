@@ -93,11 +93,11 @@
 	text-transform: uppercase;
 }
 
-@mixin t-links($size: 0.75rem) { //15px
+@mixin t-links($size: 0.8125rem) { //15px
 	font-family: "Main", sans-serif;
 	font-weight: 500;
 	line-height: 130%;
-	font-size: clamp(0.75rem, 1vw, $size);
+	font-size: clamp(0.8125rem, 1vw, $size);
 	letter-spacing: var(--spacing-copy);
 	text-transform: uppercase;
 }

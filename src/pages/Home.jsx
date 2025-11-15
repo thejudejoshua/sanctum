@@ -84,10 +84,7 @@ export default function Home() {
 				</div>
 				<div className="content sectors-list flex flex-row justify-between items-start">
 					<div className="content-card sector flex flex-col justify-between items-start">
-						
-							<p className='h1'>
-								"
-							</p>
+							<Quote/>
 						<div className='content-card-body'>
 							<p className='h6'>
 								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
@@ -191,46 +188,73 @@ export default function Home() {
 						</h3>
 					</div>
 				</div>
-				<div className="content grid grid-cols-3 justify-between items-start">
-					
-					<div className="content-card flex flex-col col-span-1 justify-between items-start">
-						<div className='content-card-title'>
-							<p className='t-highlights'>
-								Pitch Us
-							</p>
-						</div>
-						<div className='content-card-body'>
+				<div className="content flex flex-row justify-between items-start">
+					<div className="content-card quote flex flex-col justify-between items-start">
+						<Quote/>
+						<div className='content-card-body flex flex-col justify-start items-start'>
 							<p className='h6'>
-								Here’s what we are looking for when it comes to making an investment.
+								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
 							</p>
+							<div className={'testifier flex flex-row'}>
+								<div className={'testifier-image'}>
+									<ImageComponent src={''} alt={''}/>
+								</div>
+								<p className='t-copy user'>
+									<span>Joey Stanley</span>
+									<span>Co-Founder, Sanctum Groups</span>
+								</p>
+							</div>
 						</div>
 					</div>
-					
-					
-					<div className="content-card flex flex-col col-span-1 justify-between items-start">
-						<div className='content-card-title'>
-							<p className='t-highlights'>
-								Our Portfolio
-							</p>
-						</div>
-						<div className='content-card-body'>
+					<div className="content-card quote flex flex-col justify-between items-start">
+						<Quote/>
+						<div className='content-card-body flex flex-col justify-start items-start'>
 							<p className='h6'>
-								These incredible founders are making big waves across key Sanctum® verticals.
+								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
 							</p>
+							<div className={'testifier flex flex-row'}>
+								<div className={'testifier-image'}>
+									<ImageComponent src={''} alt={''}/>
+								</div>
+								<p className='t-copy user'>
+									<span>Joey Stanley</span>
+									<span>Co-Founder, Sanctum Groups</span>
+								</p>
+							</div>
 						</div>
 					</div>
-					
-					
-					<div className="content-card flex flex-col col-span-1 justify-between items-start">
-						<div className='content-card-title'>
-							<p className='t-highlights'>
-								Meet the team
-							</p>
-						</div>
-						<div className='content-card-body'>
+					<div className="content-card quote flex flex-col justify-between items-start">
+						<Quote/>
+						<div className='content-card-body flex flex-col justify-start items-start'>
 							<p className='h6'>
-								Meet the team of experts behind the scenes at Curate Capital.
+								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
 							</p>
+							<div className={'testifier flex flex-row'}>
+								<div className={'testifier-image'}>
+									<ImageComponent src={''} alt={''}/>
+								</div>
+								<p className='t-copy user'>
+									<span>Joey Stanley</span>
+									<span>Co-Founder, Sanctum Groups</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="content-card quote flex flex-col justify-between items-start">
+						<Quote/>
+						<div className='content-card-body flex flex-col justify-start items-start'>
+							<p className='h6'>
+								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
+							</p>
+							<div className={'testifier flex flex-row'}>
+								<div className={'testifier-image'}>
+									<ImageComponent src={''} alt={''}/>
+								</div>
+								<p className='t-copy user'>
+									<span>Joey Stanley</span>
+									<span>Co-Founder, Sanctum Groups</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
