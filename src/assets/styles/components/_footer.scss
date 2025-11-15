@@ -23,15 +23,17 @@
 
 	&-info{
 		&-logo{
-			width: 190px;
-			height: 24px;
+			& svg{
+				height: 27px;
+				width: auto;
+			}
 		}
 	}
 	&-links{
 		gap: var(--gap-md);
 
 		&-list-holder{
-			gap: var(--gap-lg);
+			gap: var(--gap-xl);
 
 			& .links-list{
 				gap: var(--gap-md);

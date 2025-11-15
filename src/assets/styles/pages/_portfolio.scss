@@ -1,0 +1,68 @@
+.partner{
+	&-list{
+		gap: var(--gap-xs);
+		width: 100%;
+
+		&.incomplete {
+			svg {
+				font-size: 20rem;
+				color: var(--lightgrey);
+			}
+
+			& h5 {
+				width: 96%;
+			}
+		}
+
+		&-card{
+			background-color: var(--darkgrey);
+			padding: var(--padding-lg);
+			gap: var(--gap-xl);
+			overflow: hidden;
+
+			& .industry-logo{
+				position: absolute;
+				top: 6%;
+				right: -31%;
+				left: unset;
+				transform: rotate(-48deg);
+				width: 240px;
+			}
+
+			&-bottom{
+				gap: var(--gap-md);
+
+				& p{
+					display: -webkit-box;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+				}
+
+				& .button{
+					color:  var(--primary);
+				}
+			}
+		}
+	}
+
+	&-details-container{
+		gap: var(--gap-xl);
+
+		&-section{
+			gap: var(--gap-xxs);
+
+			&.info{
+				gap: var(--gap-xl);
+			}
+
+			&-inner{
+				gap: var(--gap-xxs);
+			}
+
+			& a{
+				color: var(--color-blue-500);
+			}
+		}
+	}
+}

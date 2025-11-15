@@ -36,31 +36,30 @@ export default function Footer(){
 			</section>
 			<section className="footer flex flex-col justify-start items-end">
 				<div className="footer-info flex flex-row justify-between w-full items-end">
-					<div className="footer-info-logo flex justify-start items-center">
+					<div className="footer-info-logo">
 						<Logo/>
 					</div>
 					<div className="footer-links flex flex-col justify-start items-start">
 						<p className="t-highlights">Useful Links</p>
 						<div className="footer-links-list-holder flex justify-start items-start">
 							<div className="links-list flex flex-col justify-start items-start">
-								<Button className='footer-link' direction={'home'} hierarchy={'tertiary'}>Home</Button>
-								<Button className='footer-link' direction={'about'} hierarchy={'tertiary'}>About</Button>
-								<Button className='footer-link' direction={'contact'} hierarchy={'tertiary'}>Contact</Button>
+								<Button direction={'home'} hierarchy={'tertiary'}>Home</Button>
+								<Button direction={'team'} hierarchy={'tertiary'}>Team</Button>
+								<Button direction={'contact'} hierarchy={'tertiary'}>Contact</Button>
 							</div>
 							<div className="links-list flex flex-col justify-start items-start">
-								<Button className='footer-link' direction={'portfolio'} hierarchy={'tertiary'}>Portfolio</Button>
-								<Button className='footer-link' direction={'team'} hierarchy={'tertiary'}>Reports<ArrowUpRightIcon/></Button>
-								<Button className='footer-link' direction={'team'} hierarchy={'tertiary'}>Team</Button>
+								<Button direction={'portfolio'} hierarchy={'tertiary'}>Portfolio</Button>
+								<Button direction={'team'} hierarchy={'tertiary'}>Reports<ArrowUpRightIcon/></Button>
+								<Button direction={'invest'} hierarchy={'tertiary'}>Resources<ArrowUpRightIcon/></Button>
 							</div>
 							<div className="links-list flex flex-col justify-start items-start">
-								<Button className='footer-link' direction={'invest'} hierarchy={'tertiary'}>Resources<ArrowUpRightIcon/></Button>
-								<Button className='footer-link' direction={'invest'} hierarchy={'tertiary'}>Invest</Button>
-								<Button className='footer-link' direction={'pitch'} hierarchy={'tertiary'}>Pitch</Button>
+								<Button direction={'invest'} hierarchy={'tertiary'}>Invest</Button>
+								<Button direction={'pitch'} hierarchy={'tertiary'}>Pitch</Button>
+								<Button direction={'terms-of-use'} hierarchy={'tertiary'}>Terms of Use</Button>
 							</div>
 							<div className="links-list flex flex-col justify-start items-start">
-								<Button className='footer-link' direction={'privacy-policy'} hierarchy={'tertiary'}>Privacy Policy</Button>
-								<Button className='footer-link' direction={'terms-of-use'} hierarchy={'tertiary'}>Terms of Use</Button>
-								<Button className='footer-link' direction={'cookie-policy'} hierarchy={'tertiary'}>Cookie Policy</Button>
+								<Button direction={'privacy-policy'} hierarchy={'tertiary'}>Privacy Policy</Button>
+								<Button direction={'cookie-policy'} hierarchy={'tertiary'}>Cookie Policy</Button>
 							</div>
 						</div>
 					</div>

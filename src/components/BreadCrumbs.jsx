@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import React from 'react';
 
 export default function BreadCrumbs() {
 	const location = useLocation();
@@ -22,14 +23,20 @@ export default function BreadCrumbs() {
 			<Link to="/" className="t-links">home</Link>
 			
 			{breadcrumbs.map((crumb, index) => (
-				<>
-					<span key={index} className="t-links arrow flex flex-row items-center">
+				<React.Fragment key={index}>
+					<span className="t-links arrow flex flex-row items-center">
 						&gt;
 					</span>
-					<span key={index} className="t-highlights flex flex-row items-center">
-						{crumb.label}
-					</span>
-				</>
+					{index === breadcrumbs.length - 1 ? (
+						<span className="t-highlights flex flex-row items-center">
+							{decodeURIComponent(crumb.label)}
+						</span>
+					) : (
+						<Link to={crumb.path} className="t-links flex flex-row items-center">
+							{decodeURIComponent(crumb.label)}
+						</Link>
+					)}
+				</React.Fragment>
 			))}
 		</div>
 	);
