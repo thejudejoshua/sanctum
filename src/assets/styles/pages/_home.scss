@@ -35,7 +35,7 @@
 		}
 	}
 
-	& .mission, .sectors-list, .commitment {
+	& .mission, .commitment {
 		& .content{
 			&-card{
 				background-image: none;
@@ -43,12 +43,9 @@
 		}
 	}
 
-	& .mission {
-		& .content{
-			&-card{
-				//min-height: 600px;
-			}
-		}
+	& .sectors-list {
+		width: 100%;
+		gap: var(--gap-sm);
 	}
 
 	& .commitment, & .testimonials{
@@ -58,6 +55,14 @@
 		& .notice{
 			color: var(--primary);
 			text-decoration: underline;
+		}
+	}
+
+	& .sectors, & .testimonials{
+		padding-inline: 0;
+
+		& .title, & .content.grid{
+			padding-inline: var(--padding-xl-2);
 		}
 	}
 

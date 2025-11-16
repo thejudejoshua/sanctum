@@ -16,6 +16,7 @@ section{
 
 	& .content{
 		align-items: stretch;
+		width: 100%;
 
 		&-card{
 			padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
@@ -54,15 +55,17 @@ section{
 			}
 
 			&.quote{
-				width: 480px;
+				width: 520px;
 				gap: var(--gap-2xl);
+				height: 100%;
 
 				& .testifier{
 					gap: var(--gap-xs);
 
 					&-image{
-						width: 72px;
-						height: 72px;
+						min-width: 56px;
+						width: 56px;
+						height: 56px;
 						border-radius: 100%;
 						overflow: hidden;
 						background-color: var(--lightgrey);
@@ -71,6 +74,10 @@ section{
 							width: 100%;
 							height: 100%;
 						}
+					}
+
+					& .t-highlights{
+						color: var(--white)
 					}
 				}
 			}
@@ -110,10 +117,15 @@ section{
 	}
 }
 
-.content{
+.swiper{
+	width: 100%;
+	padding-inline: var(--padding-xl-2);
 
-	&-card{
+	&-wrapper{
+		display: flex;
+	}
 
+	&-slide{
+		width: fit-content !important;
 	}
 }
-

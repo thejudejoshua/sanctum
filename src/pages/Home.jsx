@@ -1,7 +1,11 @@
+import React from 'react';
+
 import Button from "../components/Button.jsx";
 import {ArrowUpRightIcon, BriefcaseIcon, HandWavingIcon, ArchiveIcon} from "@phosphor-icons/react";
 
 import ImageComponent from "../components/ImageComponent.jsx";
+import Sectors from "../components/Sectors.jsx";
+import Testimonials from "../components/Testimonials.jsx";
 
 import Divider from "../assets/images/divider.svg?react";
 import MissionImageOne from '../assets/images/mission-1.webp';
@@ -27,12 +31,12 @@ export default function Home() {
 			<section className='scrollingText'>
 				<div className="scrollingText-holder flex flex-row ">
 					{scrollingText.map((text, index) => (
-						<>
-							<p className="t-highlights scrollingText-item" key={index}>{text}</p>
+						<React.Fragment key={index}>
+							<p className="t-highlights scrollingText-item">{text}</p>
 							<div>
 								<Divider/>
 							</div>
-						</>
+						</React.Fragment>
 					))}
 				</div>
 			</section>
@@ -82,15 +86,8 @@ export default function Home() {
 						</h3>
 					</div>
 				</div>
-				<div className="content sectors-list flex flex-row justify-between items-start">
-					<div className="content-card sector flex flex-col justify-between items-start">
-							<Quote/>
-						<div className='content-card-body'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-						</div>
-					</div>
+				<div className="content sectors-list flex flex-row justify-start items-start">
+					<Sectors/>
 				</div>
 				<div className="content grid grid-cols-5 justify-between items-start">
 					<div className="col-span-3">
@@ -189,74 +186,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="content flex flex-row justify-between items-start">
-					<div className="content-card quote flex flex-col justify-between items-start">
-						<Quote/>
-						<div className='content-card-body flex flex-col justify-start items-start'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-							<div className={'testifier flex flex-row'}>
-								<div className={'testifier-image'}>
-									<ImageComponent src={''} alt={''}/>
-								</div>
-								<p className='t-copy user'>
-									<span>Joey Stanley</span>
-									<span>Co-Founder, Sanctum Groups</span>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className="content-card quote flex flex-col justify-between items-start">
-						<Quote/>
-						<div className='content-card-body flex flex-col justify-start items-start'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-							<div className={'testifier flex flex-row'}>
-								<div className={'testifier-image'}>
-									<ImageComponent src={''} alt={''}/>
-								</div>
-								<p className='t-copy user'>
-									<span>Joey Stanley</span>
-									<span>Co-Founder, Sanctum Groups</span>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className="content-card quote flex flex-col justify-between items-start">
-						<Quote/>
-						<div className='content-card-body flex flex-col justify-start items-start'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-							<div className={'testifier flex flex-row'}>
-								<div className={'testifier-image'}>
-									<ImageComponent src={''} alt={''}/>
-								</div>
-								<p className='t-copy user'>
-									<span>Joey Stanley</span>
-									<span>Co-Founder, Sanctum Groups</span>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className="content-card quote flex flex-col justify-between items-start">
-						<Quote/>
-						<div className='content-card-body flex flex-col justify-start items-start'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-							<div className={'testifier flex flex-row'}>
-								<div className={'testifier-image'}>
-									<ImageComponent src={''} alt={''}/>
-								</div>
-								<p className='t-copy user'>
-									<span>Joey Stanley</span>
-									<span>Co-Founder, Sanctum Groups</span>
-								</p>
-							</div>
-						</div>
-					</div>
+					<Testimonials/>
 				</div>
 			</section>
 		</>

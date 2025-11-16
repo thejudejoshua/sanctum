@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
 import BreadCrumbs from "../components/BreadCrumbs.jsx";
+import ImageComponent from "../components/ImageComponent.jsx";
+import Button from "../components/Button.jsx";
 
 import {ArrowRightIcon, GlobeSimpleXIcon} from "@phosphor-icons/react";
 
-import { createClient } from "@supabase/supabase-js";
-import Button from "../components/Button.jsx";
 
 // Supabase client
 const supabase = createClient(
@@ -80,10 +82,10 @@ export default function Portfolio() {
 								{partners.map((partner) => (
 									<div key={partner.id} className="partner-list-card flex flex-col col-span-1 items-start">
 										{/* Partner logo */}
-										<img
+										<ImageComponent
 											src={`/images/portfolio/${(partner.name).toLowerCase().replace(/\s+/g, "")}/${partner.partner_image}`}
 											alt={`${partner.name} logo`}
-											className="partner-logo w-32 h-auto"
+											className="partner-logo"
 										/>
 										
 										<div className={'partner-list-card-bottom flex flex-col items-start'}>
@@ -95,37 +97,11 @@ export default function Portfolio() {
 											</Button>
 										</div>
 										
-										{/* Industry image */}
-										<img
-											src={`/images/industry/${(partner.InvestmentSectors.name).toLowerCase().replace(/\s+/g, "")}.svg`}
+										{/* Sector image */}
+										<ImageComponent
+											src={`/images/sectors/marks/${(partner.InvestmentSectors.name).toLowerCase().replace(/\s+/g, "")}.svg`}
 											alt={`${partner.InvestmentSectors.name} icon`}
-											className="industry-logo"
-										/>
-									</div>
-								))}
-								{partners.map((partner) => (
-									<div key={partner.id} className="partner-list-card flex flex-col col-span-1 items-start">
-										{/* Partner logo */}
-										<img
-											src={`/images/portfolio/${(partner.name).toLowerCase().replace(/\s+/g, "")}/${partner.partner_image}`}
-											alt={`${partner.name} logo`}
-											className="partner-logo w-32 h-auto"
-										/>
-										
-										<div className={'partner-list-card-bottom flex flex-col items-start'}>
-											{/* Partner bio */}
-											<p className="partner-bio t-copy">{partner.partner_bio}</p>
-											
-											<Button direction={`portfolio/${encodeURIComponent(partner.name)}`} hierarchy={'tertiary'} label={'view profile'}>
-												<ArrowRightIcon weight={'regular'}/>
-											</Button>
-										</div>
-										
-										{/* Industry image */}
-										<img
-											src={`/images/industry/${(partner.InvestmentSectors.name).toLowerCase().replace(/\s+/g, "")}.svg`}
-											alt={`${partner.InvestmentSectors.name} icon`}
-											className="industry-logo"
+											className="sector-logo"
 										/>
 									</div>
 								))}

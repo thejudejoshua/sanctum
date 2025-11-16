@@ -1,0 +1,27 @@
+.sector-card{
+	background-color: var(--black) !important;
+	background-image: radial-gradient(circle, var(--sector-white-pattern) 1.5px, transparent 1.5px) !important;
+	background-size: 15px 15px !important;
+	border: var(--border-thin) solid var(--lightgrey);
+	background-blend-mode: unset !important;
+	background-position: center !important;
+	background-repeat: unset !important;
+	min-width: 480px;
+	width: 480px;
+	gap: var(--gap-md) !important;
+	padding: var(--padding-xxxl) var(--padding-xl) var(--padding-xl) !important;
+	height: fit-content;
+
+	&-icon{
+		width: auto !important;
+		height: 200px !important;
+	}
+
+	&-highlight {
+		position: absolute;
+		top: 8%;
+		left: unset;
+		right: 0;
+		padding-inline: var(--padding-xs);
+	}
+}

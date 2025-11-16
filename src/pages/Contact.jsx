@@ -3,9 +3,9 @@ import BreadCrumbs from "../components/BreadCrumbs.jsx";
 
 import {ExportIcon} from "@phosphor-icons/react";
 
-import Quote from "../assets/images/quote.svg?react";
 import ImageComponent from "../components/ImageComponent.jsx";
 import ContactTestimonialImage from "../assets/images/contact-testimonial.webp";
+import Testimonials from "../components/Testimonials.jsx";
 
 export default function Contact() {
 	return (
@@ -20,25 +20,9 @@ export default function Contact() {
 				
 				<div className="content grid grid-cols-5 justify-between items-start">
 					<div className="col-span-3">
-						<ImageComponent src={ContactTestimonialImage} width="auto" alt="mission" />
+						<ImageComponent src={ContactTestimonialImage} width="auto" alt="mission" className={'object-left'} />
 					</div>
-					<div className="content-card quote flex flex-col col-span-2 justify-between items-start">
-						<Quote/>
-						<div className='content-card-body flex flex-col justify-start items-start'>
-							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
-							</p>
-							<div className={'testifier flex flex-row'}>
-								<div className={'testifier-image'}>
-									<ImageComponent src={''} alt={''}/>
-								</div>
-								<p className='t-copy user'>
-									<span>Joey Stanley</span>
-									<span>Co-Founder, Sanctum Groups</span>
-								</p>
-							</div>
-						</div>
-					</div>
+					<Testimonials id={4}/>
 				</div>
 			
 				<div className='contact-info flex flex-row items-start justify-start'>
