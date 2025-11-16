@@ -35,14 +35,6 @@
 		}
 	}
 
-	& .mission, .commitment {
-		& .content{
-			&-card{
-				background-image: none;
-			}
-		}
-	}
-
 	& .sectors-list {
 		width: 100%;
 		gap: var(--gap-sm);
