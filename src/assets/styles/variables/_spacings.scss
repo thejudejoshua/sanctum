@@ -10,7 +10,7 @@
 	// =======================
 	// BORDER WEIGHT
 	// =======================
-	--border-thin: 0.0625rem;    // ~1px thin border, responsive
+	--border: 0.0625rem;    // ~1px thin border, responsive
 
 	// =======================
 	// GAPS / SPACING
@@ -63,6 +63,8 @@
 		--container-width: 52.125rem;
 		--container-height: 74.625rem;
 
+		--border: 0.0425rem;    // ~1px thin border, responsive
+
 		// GAPS  (mapped from button-inner / siblings / paragraph / has-button / card / title / group-parent / body-section / section-parent / main)
 		--gap-xxs: 0.5rem;   // 8px
 		--gap-xs: 1rem;      // 16px
@@ -107,6 +109,8 @@
 		// 430px x 932px
 		--container-width: 26.875rem;
 		--container-height: 58.25rem;
+
+		--border: 0.0125rem;    // ~1px thin border, responsive
 
 		// GAPS  (mobile column from Figma)
 		--gap-xxs: 0.25rem;   // 4px  (button-inner-gap)

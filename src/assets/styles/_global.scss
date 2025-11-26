@@ -51,7 +51,7 @@ section{
 
 			&-title{
 				width: 100%;
-				border-bottom: var(--border-thin) solid var(--primary);
+				border-bottom: var(--border) solid var(--primary);
 				padding-bottom: var(--padding-xs);
 
 				& .t-highlights{
@@ -108,6 +108,14 @@ section{
 
 .hero{
 	padding: var(--padding-section) var(--padding-xl-2);
+
+	@include respond-to("tablet") {
+		padding-top: var(--padding-body);
+	}
+
+	@include respond-to("mobile") {
+		padding-top: var(--padding-body);
+	}
 
 	&-content{
 		gap: var(--gap-xl);

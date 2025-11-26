@@ -134,7 +134,7 @@ export default function Home() {
 							<p className='h6'>
 								Here’s what we are looking for when it comes to making an investment.
 							</p>
-							<Button label={'Learn More'} direction={''} hierarchy={'secondary'}>
+							<Button label={'Learn More'} direction={'pitch'} hierarchy={'secondary'}>
 								<ArchiveIcon weight={'regular'}/>
 							</Button>
 						</div>
@@ -166,9 +166,9 @@ export default function Home() {
 						</div>
 						<div className='content-card-body'>
 							<p className='h6'>
-								Meet the team of experts behind the scenes at Curate Capital.
+								Meet the team of experts behind the scenes at Sanctum® groups.
 							</p>
-							<Button label={'Say Hello'} direction={''} hierarchy={'secondary'}>
+							<Button label={'Say Hello'} direction={'team'} hierarchy={'secondary'}>
 								<HandWavingIcon weight={'regular'}/>
 							</Button>
 						</div>

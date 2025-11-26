@@ -10,7 +10,7 @@
 	}
 
 	&-data{
-		width: 64%;
+		width: 72%;
 		gap: var(--gap-xl);
 
 		@include respond-to("tablet") {
@@ -24,10 +24,11 @@
 		& form{
 			flex-direction: row;
 			gap: var(--gap-xxs);
-			width: 100%;
+			width: 72%;
 
 			@include respond-to("mobile") {
 				flex-direction: column;
+				width: 100%;
 			}
 
 			& button{
@@ -115,7 +116,7 @@
 
 	& .copyright{
 		padding-top: var(--padding-xl-2);
-		border-top: var(--border-thin) solid var(--lightgrey);
+		border-top: var(--border) solid var(--lightgrey);
 
 		@include respond-to("mobile") {
 			flex-direction: column-reverse;

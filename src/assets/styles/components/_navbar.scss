@@ -2,16 +2,56 @@
 
 .navbar {
 	position: fixed;
-	z-index: 10000;
+	z-index: 1000000;
 	background: var(--black);
 	padding: var(--padding-lg) var(--padding-xl-2);
 	width: 100%;
 	top: 0;
-	border-bottom: var(--border-thin) solid var(--lightgrey);
+	border-bottom: var(--border) solid var(--lightgrey);
 
-	// for the hamburger animation state
-	&.is-open {
-		// you can add extra styling for the open state if you want
+	&-toggle {
+		display: none; // hidden on desktop by default
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: none;
+		background: transparent;
+		padding: 0;
+		cursor: pointer;
+		outline: none; // remove weird button styles
+
+		// 3 bars: top (::before), middle (span), bottom (::after)
+		&:before,
+		&:after,
+		& span {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: var(--white);
+			border-radius: 999px;
+			transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		& span {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+		@include respond-to("mobile") {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
 	&-logo {
@@ -34,135 +74,88 @@
 			pointer-events: none;
 			position: relative;
 
-			&::after {
+			&:before{
+				@include respond-to("mobile") {
+					content: "";
+					width: 8px;
+					height: 8px;
+					margin-right: var(--gap-xs);
+					display: inline-block;
+					border-radius: var(--radius-lg);
+					position: relative;
+					background: var(--primary);
+				}
+			}
+
+			&:after {
 				content: "";
 				width: 110%;
 				height: 2px;
 				display: inline-block;
 				position: absolute;
-				top: 30%;
+				top: 35%;
 				bottom: 50%;
 				left: -5%;
 				background: var(--primary);
 
 				@include respond-to("mobile") {
-					top: 40%;
+					display: none;
 				}
 			}
 		}
-	}
 
-	// -----------------------
-	// MOBILE NAV TOGGLE
-	// -----------------------
-	&-toggle {
-		display: none; // hidden on desktop by default
-		position: relative;
-		width: 1.5rem;
-		height: 1.5rem;
-		border: none;
-		background: transparent;
-		padding: 0;
-		cursor: pointer;
-
-		// remove weird button styles
-		outline: none;
-
-		// 3 bars: top (::before), middle (span), bottom (::after)
-		&::before,
-		&::after,
-		& span {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background: var(--white);
-			border-radius: 999px;
-			transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
-		}
-
-		&::before {
-			top: 0;
-		}
-
-		& span {
-			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		&::after {
-			bottom: 0;
-		}
-	}
-
-	// Transform into "X" when navbar is open
-	&.is-open {
-		& .navbar-toggle {
-			&::before {
-				top: 50%;
-				transform: translateY(-50%) rotate(45deg);
-			}
-
-			& span {
-				opacity: 0;
-			}
-
-			&::after {
-				bottom: 50%;
-				transform: translateY(50%) rotate(-45deg);
-			}
-		}
-	}
-}
-
-// -----------------------
-// RESPONSIVE: MOBILE MENU
-// -----------------------
-@include respond-to("mobile") {
-	.navbar {
-
-		// show the toggle on mobile
-		&-toggle {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		// links become a dropdown / drawer
-		&-links {
+		@include respond-to("mobile") {
 			position: absolute;
 			top: 100%;
 			right: 0;
 			left: 0;
 			background: var(--darkgrey);
-			border-bottom: var(--border-thin) solid var(--lightgrey);
-			padding: var(--padding-xxl) var(--padding-xl-2);
+			border-bottom: var(--border) solid var(--lightgrey);
+			padding: 0;
 			flex-direction: column;
-			gap: var(--gap-lg);
-			display: none; // hidden by default on mobile
-		}
+			gap: 0;
+			height: 0; // hidden by default on mobile
+			overflow: hidden;
+			transition: 1s ease;
 
-		// when navbar has .is-open, show the links
-		&.is-open {
-			& .navbar-links {
-				display: flex;
+			& a{
+				padding-block: var(--padding-xl);
+				border-bottom: var(--border) solid var(--lightgrey);
+
+				&:last-of-type{
+					border-bottom: none;
+				}
 			}
 		}
 	}
-}
 
-// -----------------------
-// DESKTOP ONLY
-// -----------------------
-@include respond-to("desktop") {
-	.navbar {
-		&-links {
-			display: flex;
-		}
 
-		&-toggle {
-			display: none;
+	// Transform into "X" when navbar is open
+	&.is-open {
+
+		& .navbar{
+			&-toggle {
+				&:before {
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				& span {
+					opacity: 0;
+				}
+
+				&:after {
+					bottom: 50%;
+					transform: translateY(50%) rotate(-45deg);
+				}
+			}
+
+			&-links {
+				@include respond-to("mobile") {
+					height: auto;
+					padding: var(--padding-xxl) var(--padding-xl-2);
+				}
+			}
 		}
 	}
 }
