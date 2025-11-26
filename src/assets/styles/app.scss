@@ -1,6 +1,7 @@
 @use "variables/type";
 @use "variables/colors";
 @use "variables/spacings";
+@use "variables/breakpoints";
 
 @use "components/navbar";
 @use "components/button";
@@ -11,8 +12,9 @@
 @use "pages/home";
 @use "pages/contact";
 @use "pages/portfolio";
+@use "pages/teams";
 
-@use "general";
+@use "global";
 
 *,
 *::before,
@@ -117,4 +119,13 @@ html, body {
 
 .t-links {
 	@include type.t-links;
+}
+
+.t-error{
+	color: var(--complimentary);
+	font-style: italic;
+}
+
+.t-pending{
+	color: var(--secondary);
 }

@@ -1,9 +1,33 @@
+@use '../variables/breakpoints' as *;
+
 .form{
-	gap: var(--gap-xxs);
-	width: 100%;
+	width: 56%;
+	gap: var(--gap-lg);
+
+	@include respond-to("tablet") {
+		width: 100%;
+	}
+
+	@include respond-to("mobile") {
+		width: 100%;
+	}
+
+	&-title{
+		width: 70%;
+
+		@include respond-to("tablet") {
+			width: 100%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
+	}
 
 	&-input-holder{
 		width: 100%;
+		gap: var(--gap-sm);
 
 		input, textarea, select {
 			border: var(--border-thin) solid var(--white);
@@ -17,6 +41,12 @@
 
 		textarea{
 			height: 200px;
+		}
+	}
+
+	& button{
+		@include respond-to("mobile") {
+			width: 100%;
 		}
 	}
 }

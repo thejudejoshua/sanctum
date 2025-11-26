@@ -1,3 +1,5 @@
+@use '../variables/breakpoints' as *;
+
 .newsletter{
 	&-background-element{
 		position: absolute;
@@ -11,8 +13,28 @@
 		width: 64%;
 		gap: var(--gap-xl);
 
+		@include respond-to("tablet") {
+			width: 80%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
 		& form{
 			flex-direction: row;
+			gap: var(--gap-xxs);
+			width: 100%;
+
+			@include respond-to("mobile") {
+				flex-direction: column;
+			}
+
+			& button{
+				@include respond-to("mobile") {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -26,18 +48,67 @@
 			& svg{
 				height: 27px;
 				width: auto;
+
+				@include respond-to("tablet") {
+					height: 20px;
+				}
+
+				@include respond-to("mobile") {
+					height: 16px;
+				}
 			}
+		}
+
+		@include respond-to("tablet") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-xl);
+		}
+
+		@include respond-to("mobile") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-2xl);
 		}
 	}
 	&-links{
 		gap: var(--gap-md);
 
+		@include respond-to("tablet") {
+			width: 100%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
 		&-list-holder{
 			gap: var(--gap-xl);
+
+			@include respond-to("tablet") {
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			@include respond-to("mobile") {
+				width: 100%;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: var(--gap-md);
+			}
 
 			& .links-list{
 				gap: var(--gap-md);
 				justify-content: space-between;
+
+				&:last-of-type{
+					@include respond-to("mobile") {
+						flex-direction: row;
+						gap: var(--gap-xl);
+					}
+				}
 			}
 		}
 	}
@@ -45,6 +116,13 @@
 	& .copyright{
 		padding-top: var(--padding-xl-2);
 		border-top: var(--border-thin) solid var(--lightgrey);
+
+		@include respond-to("mobile") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-xl);
+		}
 
 		&-text{
 			& .t-highlights{

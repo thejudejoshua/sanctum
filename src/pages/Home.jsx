@@ -29,7 +29,7 @@ export default function Home() {
 			</section>
 			
 			<section className='scrollingText'>
-				<div className="scrollingText-holder flex flex-row ">
+				<div className="scrollingText-holder flex flex-row items-center">
 					{scrollingText.map((text, index) => (
 						<React.Fragment key={index}>
 							<p className="t-highlights scrollingText-item">{text}</p>
@@ -81,12 +81,12 @@ export default function Home() {
 				<div className="title flex flex-col items-center justify-start">
 					<p className='t-highlights'>Our Ecosystem of Ventures</p>
 					<div className='title-main flex flex-col items-start justify-start'>
-						<h3 className='h3'>
+						<h3 className='h3 text-center'>
 							90-95% of our investments fall into these categories.
 						</h3>
 					</div>
 				</div>
-				<div className="content sectors-list flex flex-row justify-start items-start">
+				<div className="content sectors-list grid justify-start items-start">
 					<Sectors/>
 				</div>
 				<div className="content grid grid-cols-5 justify-between items-start">

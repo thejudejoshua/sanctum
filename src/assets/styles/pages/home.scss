@@ -1,3 +1,5 @@
+@use '../variables/breakpoints' as *;
+
 .home{
 	& .hero{
 		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../images/hero.webp");
@@ -6,9 +8,32 @@
 		background-size: cover;
 		padding: var(--padding-body) var(--padding-xl-2) var(--padding-xl);
 
+		@include respond-to("tablet") {
+			flex-direction: column;
+			justify-content: end;
+			align-items: start;
+			height: 50vh;
+		}
+
+		@include respond-to("mobile") {
+			flex-direction: column;
+			justify-content: end;
+			align-items: start;
+			height: 72vh;
+			background-position: left center;
+		}
+
 		&-content{
 			max-width: 70%;
 			gap: var(--gap-xxs);
+
+			@include respond-to("tablet") {
+				max-width: 80%;
+			}
+
+			@include respond-to("mobile") {
+				max-width: 100%;
+			}
 		}
 
 		& .button{
@@ -31,6 +56,10 @@
 			& svg {
 				width: 32px;
 				display: inline-block;
+
+				@include respond-to("mobile") {
+					width: 16px;
+				}
 			}
 		}
 	}
@@ -38,6 +67,15 @@
 	& .sectors-list {
 		width: 100%;
 		gap: var(--gap-sm);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+
+		@include respond-to("tablet") {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include respond-to("mobile") {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
 	}
 
 	& .commitment, & .testimonials{
@@ -50,7 +88,7 @@
 		}
 	}
 
-	& .sectors, & .testimonials{
+	& .testimonials{
 		padding-inline: 0;
 
 		& .title, & .content.grid{

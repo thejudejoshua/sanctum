@@ -12,8 +12,31 @@ import 'swiper/css/free-mode';
 export default function Testimonials({ id = null }) {
 	const { data, loading, error } = getTestimonials(id);
 	
-	if (loading) return <p>Loading testimonials...</p>;
-	if (error) return <p>Error: {error}</p>;
+	if (loading) return (
+		<Swiper
+			modules={[FreeMode]}
+			freeMode={true}
+			spaceBetween={30}
+			slidesPerView={2.2}
+			grabCursor={true}
+			className="testimonials-swiper no-show"
+		>
+			<p className={'t-copy t-pending'}>Loading testimonials...</p>
+		</Swiper>
+	);
+	
+	if (error && !loading) return (
+		<Swiper
+			modules={[FreeMode]}
+			freeMode={true}
+			spaceBetween={30}
+			slidesPerView={2.2}
+			grabCursor={true}
+			className="testimonials-swiper no-show"
+		>
+			<p className={'t-copy t-error'}>Error: {error}</p>
+		</Swiper>
+	);
 	
 	if (id) {
 		return (

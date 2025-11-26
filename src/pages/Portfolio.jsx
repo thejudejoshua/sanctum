@@ -77,7 +77,7 @@ export default function Portfolio() {
 				
 					{!loading && !error && partners.length > 0 && (
 						<>
-							<h1 className="h1">Illuminating Africa’s future through Ventures that bridge Vision, Creativity, and Capital.</h1>
+							<h1 className="h2">Illuminating Africa’s future through Ventures that bridge Vision, Creativity, and Capital.</h1>
 							<div className="partner-list complete grid grid-cols-3">
 								{partners.map((partner) => (
 									<div key={partner.id} className="partner-list-card flex flex-col col-span-1 items-start">

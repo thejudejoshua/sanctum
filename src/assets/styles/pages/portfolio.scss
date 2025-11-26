@@ -1,7 +1,17 @@
+@use '../variables/breakpoints' as *;
+
 .partner{
 	&-list{
 		gap: var(--gap-xs);
 		width: 100%;
+
+		@include respond-to("tablet") {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include respond-to("mobile") {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
 
 		&.incomplete {
 			svg {
@@ -11,6 +21,14 @@
 
 			& h5 {
 				width: 96%;
+
+				@include respond-to("tablet") {
+					width: 80%;
+				}
+
+				@include respond-to("mobile") {
+					width: 100%;
+				}
 			}
 		}
 
@@ -32,6 +50,18 @@
 				left: unset;
 				transform: rotate(-48deg);
 				width: 240px;
+
+				@include respond-to("tablet") {
+					width: 160px;
+					top: 5%;
+					right: -29%;
+				}
+
+				@include respond-to("mobile") {
+					width: 160px;
+					top: 1%;
+					right: -29%;
+				}
 			}
 
 			&-bottom{
@@ -59,6 +89,10 @@
 
 			&.info{
 				gap: var(--gap-xl);
+
+				@include respond-to("mobile") {
+					flex-direction: column;
+				}
 			}
 
 			&-inner{

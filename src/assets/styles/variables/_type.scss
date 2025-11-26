@@ -1,103 +1,262 @@
-@font-face {
-    font-family: "Main";
-    src: local("inter"),
-    url("/src/assets/fonts/inter.ttf") format("truetype");
-    font-style: normal;
-    font-display: swap;
-}
+@use 'breakpoints' as *;
 
+@font-face {
+	font-family: "Main";
+	src: local("inter"),
+	url("/src/assets/fonts/inter.ttf") format("truetype");
+	font-style: normal;
+	font-display: swap;
+}
 
 :root {
 	--font-size: 20px;
 	--font-family: "Main", sans-serif;
 
-	--spacing-heading-1: -0.1875rem;    // -3px
-	--spacing-heading-2: -0.125rem;   // -2px
-	--spacing-heading-3: -0.09375rem;   // -1.5px
-	--spacing-heading-4: -0.0625rem;    // -1px
-	--spacing-heading-5: -0.0625rem;    // -1px
-	--spacing-heading-6: -0.0625rem;    // -1px
-	--spacing-copy: -0.03125rem;         // -0.5px
+	/* DESKTOP LETTER SPACING */
+	--spacing-heading-1: -0.1875rem;   // -3px
+	--spacing-heading-2: -0.125rem;    // -2px
+	--spacing-heading-3: -0.09375rem;  // -1.5px
+	--spacing-heading-4: -0.0625rem;   // -1px
+	--spacing-heading-5: -0.0625rem;   // -1px
+	--spacing-heading-6: -0.0625rem;   // -1px
+	--spacing-copy: -0.03125rem;       // -0.5px
 }
+
+/* -----------------------
+   TABLET (base 16px)
+------------------------ */
+@include respond-to("tablet") {
+	:root {
+		--font-size: 16px;
+
+		--spacing-heading-1: -0.1rem;        // scaled 0.8
+		--spacing-heading-2: -0.08rem;
+		--spacing-heading-3: -0.075rem;
+		--spacing-heading-4: -0.05rem;
+		--spacing-heading-5: -0.05rem;
+		--spacing-heading-6: -0.05rem;
+		--spacing-copy: -0.025rem;
+	}
+}
+
+/* -----------------------
+   MOBILE (base 14px)
+------------------------ */
+@include respond-to("mobile") {
+	:root {
+		--font-size: 14px;
+
+		--spacing-heading-1: -0.07rem;     // scaled 0.7
+		--spacing-heading-2: -0.065rem;
+		--spacing-heading-3: -0.05rem;
+		--spacing-heading-4: -0.04375rem;
+		--spacing-heading-5: -0.04375rem;
+		--spacing-heading-6: -0.04375rem;
+		--spacing-copy: -0.021875rem;
+	}
+}
+
 
 // -----------------------
 // Headings
 // -----------------------
-@mixin h1($size: 4.77rem) { // 76.3px
+
+// h1 – base for the scale (no clamp)
+@mixin h1(
+	$desktop-size: 3.6rem,   // ≈ 57.6px
+	$tablet-size: 2.8rem,    // ≈ 44.8px
+	$mobile-size: 2.4rem     // ≈ 38.4px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 120%;
-	font-size: clamp(3.5rem, 5.5vw, $size);  // responsive
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-1);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin h2($size: 3.82rem) { // 61px
+// h2 – h1 / 1.125
+@mixin h2(
+	$desktop-size: 3.2rem,      // ≈ 51.2px
+	$tablet-size: 2.489rem,     // ≈ 39.8px
+	$mobile-size: 2.133rem      // ≈ 34.1px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 140%;
-	font-size: clamp(3rem, 4.5vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-2);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin h3($size: 3.05rem) { // 48.83px
+// h3 – h2 / 1.125
+@mixin h3(
+	$desktop-size: 2.844rem,    // ≈ 45.5px
+	$tablet-size: 2.212rem,     // ≈ 35.4px
+	$mobile-size: 1.896rem      // ≈ 30.3px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 130%;
-	font-size: clamp(2.5rem, 3.7vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-3);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin h4($size: 2.44rem) { // 39.06px
+// h4 – h3 / 1.125
+@mixin h4(
+	$desktop-size: 2.44rem,    // ≈ 40.5px
+	$tablet-size: 1.967rem,     // ≈ 31.5px
+	$mobile-size: 1.686rem      // ≈ 27.0px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 130%;
-	font-size: clamp(2rem, 3.2vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-4);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin h5($size: 1.95rem) { // 31.25px
+// h5 – h4 / 1.125
+@mixin h5(
+	$desktop-size: 1.95rem,    // ≈ 36.0px
+	$tablet-size: 1.71rem,     // ≈ 28.0px
+	$mobile-size: 1.498rem      // ≈ 24.0px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 400;
 	line-height: 140%;
-	font-size: clamp(1.75rem, 2.5vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-5);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin h6($size: 1.563rem) { // 25px
+// h6 – h5 / 1.125
+@mixin h6(
+	$desktop-size: 1.563rem,    // ≈ 32.0px
+	$tablet-size: 1.454rem,     // ≈ 24.9px
+	$mobile-size: 1.332rem      // ≈ 21.3px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 135%;
-	font-size: clamp(1.5rem, 2vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-heading-6);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
 // -----------------------
 // Copy / Body Text
 // -----------------------
-@mixin t-copy($size: 1.125rem) { // 20px
+
+// t-copy – 10 steps down from h1 in the 1.125 scale
+// desktop ≈ 20px, tablet ≈ 15.5px, mobile ≈ 13.3px
+@mixin t-copy(
+	$desktop-size: 1.125rem,    // ≈ 20.0px
+	$tablet-size: 0.97rem,      // ≈ 15.5px
+	$mobile-size: 0.832rem      // ≈ 13.3px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
 	line-height: 160%;
 	white-space: pre-line;
-	font-size: clamp(1.125rem, 1vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-copy);
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin t-highlights($size: 0.8125rem) { //16px
+// p2 – 12 steps down from h1 (used for highlights + links)
+@mixin t-highlights(
+	$desktop-size: 0.8125rem,    // ≈ 15.8px
+	$tablet-size: 0.766rem,     // ≈ 12.3px
+	$mobile-size: 0.657rem      // ≈ 10.5px
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 400;
 	line-height: 160%;
 	white-space: pre-line;
-	font-size: clamp(0.8125rem, 1vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-copy);
 	text-transform: uppercase;
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
 
-@mixin t-links($size: 0.8125rem) { //15px
+@mixin t-links(
+	$desktop-size: 0.8125rem,    // same scale position as t-highlights
+	$tablet-size: 0.766rem,
+	$mobile-size: 0.8125rem
+) {
 	font-family: "Main", sans-serif;
 	font-weight: 500;
 	line-height: 130%;
-	font-size: clamp(0.8125rem, 1vw, $size);
+	font-size: $desktop-size;
 	letter-spacing: var(--spacing-copy);
 	text-transform: uppercase;
+
+	@include respond-to("tablet") {
+		font-size: $tablet-size;
+	}
+
+	@include respond-to("mobile") {
+		font-size: $mobile-size;
+	}
 }
+
+
+

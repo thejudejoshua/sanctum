@@ -2,6 +2,17 @@ import Button from "./Button.jsx";
 import InputComponent from "./InputComponent.jsx";
 
 export default function FormComponent({ input, submitLabel, icon }) {
+	
+	// const [formData, setFormData] = useState({
+	// 	companyName: '',
+	// 	founderName: '',
+	// 	email: '',
+	// 	industry: '',
+	// 	description: '',
+	// 	fundingNeeded: '',
+	// 	website: ''
+	// });
+	
 	return (
 		<form className="form flex flex-col">
 			<div className="form-input-holder flex flex-col">
