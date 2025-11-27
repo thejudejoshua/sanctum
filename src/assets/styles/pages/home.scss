@@ -12,14 +12,14 @@
 			flex-direction: column;
 			justify-content: end;
 			align-items: start;
-			height: 50vh;
+			min-height: 50vh;
 		}
 
 		@include respond-to("mobile") {
 			flex-direction: column;
 			justify-content: end;
 			align-items: start;
-			height: 72vh;
+			min-height: 72vh;
 			background-position: left center;
 		}
 
@@ -40,28 +40,6 @@
 			margin-bottom: var(--padding-sm);
 		}
 
-	}
-
-	& .scrollingText{
-		background: var(--darkgrey);
-		padding: var(--padding-xl) var(--padding-xl-2);
-
-		&-holder{
-			gap: var(--gap-xl);
-			& .t-highlights {
-				text-wrap: nowrap;
-				color: var(--white);
-			}
-
-			& svg {
-				width: 32px;
-				display: inline-block;
-
-				@include respond-to("mobile") {
-					width: 16px;
-				}
-			}
-		}
 	}
 
 	& .sectors-list {

@@ -7,13 +7,12 @@ import ImageComponent from "../components/ImageComponent.jsx";
 import Sectors from "../components/Sectors.jsx";
 import Testimonials from "../components/Testimonials.jsx";
 
-import Divider from "../assets/images/divider.svg?react";
 import MissionImageOne from '../assets/images/mission-1.webp';
 import MissionImageTwo from '../assets/images/mission-2.webp';
 import FounderImage from '../assets/images/founder.webp';
 import Quote from '../assets/images/quote.svg?react';
+import ScrollingText from "../components/ScrollingText.jsx";
 
-const scrollingText = ['Sanctum Group', 'Multi-Sector Investor', 'Technology & Product Innovation', 'Real Estate Development', 'Sustainable Agriculture']
 
 export default function Home() {
 	return (
@@ -28,18 +27,7 @@ export default function Home() {
 				</Button>
 			</section>
 			
-			<section className='scrollingText'>
-				<div className="scrollingText-holder flex flex-row items-center">
-					{scrollingText.map((text, index) => (
-						<React.Fragment key={index}>
-							<p className="t-highlights scrollingText-item">{text}</p>
-							<div>
-								<Divider/>
-							</div>
-						</React.Fragment>
-					))}
-				</div>
-			</section>
+			<ScrollingText/>
 			
 			<section className='mission flex flex-col items-start justify-start'>
 				<div className="title flex flex-col items-start justify-start">

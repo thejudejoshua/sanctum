@@ -98,6 +98,10 @@
 				left: -5%;
 				background: var(--primary);
 
+				@include respond-to("tablet") {
+					top: 25%;
+				}
+
 				@include respond-to("mobile") {
 					display: none;
 				}
