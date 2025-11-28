@@ -1,0 +1,21 @@
+.legal-section{
+	gap: var(--gap-lg);
+
+	&-content{
+		gap: var(--gap-sm);
+
+		&-info{
+			&-title{
+				gap: var(--gap-xxs);
+			}
+			&-list{
+				gap: var(--gap-xxs);
+				padding-inline-start: var(--padding-md);
+
+				& li{
+					list-style: disc;
+				}
+			}
+		}
+	}
+}

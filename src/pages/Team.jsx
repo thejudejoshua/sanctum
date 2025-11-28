@@ -21,7 +21,8 @@ export default function Team() {
 	useEffect(() => {
 		fetchTeamMembers();
 	}, []);
-	
+
+
 	const fetchTeamMembers = async () => {
 		try {
 			const { data, error: err } = await supabase
@@ -42,6 +43,9 @@ export default function Team() {
 			setLoading(false);
 		}
 	};
+	
+	console.log(teamMembers);
+	
 	
 	return (
 		<>
@@ -80,7 +84,7 @@ export default function Team() {
 												<div className="team-member-socials flex flex-row justify-start items-start">
 													{member.linkedin && (
 														<Button
-															href={member.linkedin}
+															to={member.linkedin}
 															target="_blank"
 															rel="noopener noreferrer"
 															title="LinkedIn"

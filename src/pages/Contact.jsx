@@ -30,12 +30,14 @@ export default function Contact() {
 					<div className='contact-info flex flex-row items-start justify-start'>
 						<FormComponent
 							input={[
-								{ required: true, type: 'datalist', placeholder: 'What would you like to talk about?', options: ['Investment Options', 'Pitch an Idea', 'General message'] },
-								{ required: true, type: 'text', placeholder: 'What should we call you?' },
-								{ required: false, type: 'text', placeholder: 'Do you have a company name?' },
-								{ required: true, type: 'email', placeholder: 'How about your email address?' },
-								{ required: true, type: 'textarea', placeholder: 'Alright, enter your message here...' }
+								{ required: true, name: 'subject', list: 'subject', type: 'datalist', placeholder: 'What would you like to talk about?', options: ['Investment Options', 'Pitch an Idea', 'General message'] },
+								{ required: true, name: 'name', type: 'text', placeholder: 'What should we call you?' },
+								{ required: false, name: 'company', type: 'text', placeholder: 'Do you have a company name?' },
+								{ required: true, name: 'email', type: 'email', placeholder: 'How about your email address?' },
+								{ required: true, name: 'message', type: 'textarea', placeholder: 'Alright, enter your message here...' }
 							]}
+							formKey={"myzqnzlr"}
+							formMessage={'Thank you for reaching out. A member of our team will contact you shortly.'}
 							submitLabel={'Send message'}
 							icon={<ExportIcon weight={'bold'}/>}
 						/>

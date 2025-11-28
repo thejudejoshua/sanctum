@@ -1,0 +1,62 @@
+@use '../variables/breakpoints' as *;
+
+.invest, .pitch{
+	& .hero{
+		padding-bottom: var(--padding-xl);
+
+		& .content-card {
+			justify-content: space-between;
+
+			&.sector-card {
+				padding-block-start: var(--padding-xl) !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		& .grid {
+			gap: var(--gap-sm);
+			width: 100%;
+
+			@include respond-to("tablet") {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			@include respond-to("mobile") {
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+			}
+
+		}
+
+		& .investment, & .pitch {
+			&-criteria, &-look, &-form, &-impact, &-quote, &-why, &-founder-stories{
+				gap: var(--gap-md);
+				width: 100%;
+
+				&-title {
+					gap: var(--gap-xxs);
+				}
+			}
+
+			&-form {
+				gap: var(--gap-lg);
+				padding: var(--padding-xxl) var(--padding-xl);
+				background-image: radial-gradient(circle, var(--sector-white-pattern) 1.5px, transparent 1.5px) !important;
+				background-size: 15px 15px !important;
+				border: var(--border) solid var(--lightgrey);
+
+				&-title {
+					gap: var(--gap-xxs);
+				}
+
+				& .form {
+					align-items: center;
+
+					& .button {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -7,14 +7,14 @@ export default function Button ({label, direction, hierarchy, children, ...props
 	if (direction !== '') {
 		return (
 			<Link to={`/${direction}`} className={classes} {...props}>
-				{label}
+				<span>{label}</span>
 				{children}
 			</Link>
 		);
 	}else{
 		return (
 			<button className={classes} {...props}>
-				{label}
+				<span>{label}</span>
 				{children}
 			</button>
 		);

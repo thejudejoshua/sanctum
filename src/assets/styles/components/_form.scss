@@ -49,4 +49,10 @@
 			width: 100%;
 		}
 	}
+
+	&-message{
+		&-success{
+			color: var(--color);
+		}
+	}
 }

@@ -9,7 +9,7 @@
 }
 
 :root {
-	--font-size: 20px;
+	--font-size: 1.125rem;
 	--font-family: "Main", sans-serif;
 
 	/* DESKTOP LETTER SPACING */
@@ -27,7 +27,7 @@
 ------------------------ */
 @include respond-to("tablet") {
 	:root {
-		--font-size: 16px;
+		--font-size: 0.97rem;
 
 		--spacing-heading-1: -0.1rem;        // scaled 0.8
 		--spacing-heading-2: -0.08rem;
@@ -44,7 +44,7 @@
 ------------------------ */
 @include respond-to("mobile") {
 	:root {
-		--font-size: 14px;
+		--font-size: 0.9rem;
 
 		--spacing-heading-1: -0.07rem;     // scaled 0.7
 		--spacing-heading-2: -0.065rem;
@@ -196,7 +196,7 @@
 @mixin t-copy(
 	$desktop-size: 1.125rem,    // ≈ 20.0px
 	$tablet-size: 0.97rem,      // ≈ 15.5px
-	$mobile-size: 0.832rem      // ≈ 13.3px
+	$mobile-size: 0.9rem      // ≈ 13.3px
 ) {
 	font-family: "Main", sans-serif;
 	font-weight: 300;
@@ -216,9 +216,9 @@
 
 // p2 – 12 steps down from h1 (used for highlights + links)
 @mixin t-highlights(
-	$desktop-size: 0.8125rem,    // ≈ 15.8px
+	$desktop-size: 0.85rem,    // ≈ 15.8px
 	$tablet-size: 0.766rem,     // ≈ 12.3px
-	$mobile-size: 0.657rem      // ≈ 10.5px
+	$mobile-size: 0.9rem      // ≈ 10.5px
 ) {
 	font-family: "Main", sans-serif;
 	font-weight: 400;
@@ -240,7 +240,7 @@
 @mixin t-links(
 	$desktop-size: 0.8125rem,    // same scale position as t-highlights
 	$tablet-size: 0.766rem,
-	$mobile-size: 0.8125rem
+	$mobile-size: 0.9rem
 ) {
 	font-family: "Main", sans-serif;
 	font-weight: 500;

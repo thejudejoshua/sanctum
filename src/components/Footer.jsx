@@ -2,7 +2,6 @@ import Logo from "../assets/images/logo-white.svg?react";
 import BackgroundSVG from '../assets/images/elements-of-progress.svg?react';
 import {
 	ArrowUpRightIcon,
-	ExportIcon,
 	InstagramLogoIcon,
 	LinkedinLogoIcon,
 	XLogoIcon,
@@ -27,10 +26,11 @@ export default function Footer(){
 					</div>
 					<FormComponent
 						input={[
-							{ required: true, type: 'email', placeholder: 'Enter your email here...' },
+							{ required: true, type: 'email', name: 'email', placeholder: 'Enter your email here...' },
 						]}
+						formKey={"mldypdvy"}
+						formMessage={'Your subscription request was processed successfully!'}
 						submitLabel={'submit'}
-						icon={<ExportIcon weight={'bold'}/>}
 					/>
 				</div>
 			</section>

@@ -14,6 +14,8 @@
 @use "pages/contact";
 @use "pages/portfolio";
 @use "pages/teams";
+@use "pages/legal";
+@use "pages/invest";
 
 @use "global";
 
@@ -125,6 +127,7 @@ html, body {
 .t-error{
 	color: var(--complimentary);
 	font-style: italic;
+	@include type.t-highlights;
 }
 
 .t-pending{
