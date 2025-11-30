@@ -1,0 +1,58 @@
+@use '../variables/breakpoints' as *;
+
+.form{
+	width: 56%;
+	gap: var(--gap-lg);
+
+	@include respond-to("tablet") {
+		width: 100%;
+	}
+
+	@include respond-to("mobile") {
+		width: 100%;
+	}
+
+	&-title{
+		width: 70%;
+
+		@include respond-to("tablet") {
+			width: 100%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
+	}
+
+	&-input-holder{
+		width: 100%;
+		gap: var(--gap-sm);
+
+		input, textarea, select {
+			border: var(--border) solid var(--white);
+			background-color: transparent;
+			width: 100%;
+			padding: 0.8rem var(--padding-md);
+			text-transform: unset;
+			font-weight: 400;
+			resize: none;
+		}
+
+		textarea{
+			height: 200px;
+		}
+	}
+
+	& button{
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+	}
+
+	&-message{
+		&-success{
+			color: var(--color);
+		}
+	}
+}

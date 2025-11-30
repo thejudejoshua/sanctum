@@ -1,0 +1,76 @@
+@use '../variables/breakpoints' as *;
+
+.scrollingText{
+	background: var(--darkgrey);
+	padding: var(--padding-xl) var(--padding-xl-2);
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&-holder{
+		gap: var(--gap-xl);
+		display: flex;
+		flex-wrap: nowrap;
+		white-space: nowrap;
+
+		animation: scroll-left 20s linear infinite;
+
+		@include respond-to("tablet") {
+			animation-duration: 24s;
+		}
+
+		@include respond-to("mobile") {
+			animation-duration: 28s;
+		}
+
+		&-item{
+			gap: var(--gap-xl);
+
+			& .t-highlights {
+				text-wrap: nowrap;
+				color: var(--white);
+			}
+
+			& svg {
+				width: 32px;
+				display: inline-block;
+
+				@include respond-to("mobile") {
+					width: 16px;
+				}
+			}
+		}
+	}
+}
+
+// Animation
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-164%);
+	}
+}
+
+@include respond-to("tablet") {
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-234%);
+		}
+	}
+}
+
+@include respond-to("mobile") {
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-316%);
+		}
+	}
+}

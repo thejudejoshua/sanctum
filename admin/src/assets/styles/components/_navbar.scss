@@ -1,0 +1,165 @@
+@use '../variables/breakpoints' as *;
+
+.navbar {
+	position: fixed;
+	z-index: 1000000;
+	background: var(--black);
+	padding: var(--padding-lg) var(--padding-xl-2);
+	width: 100%;
+	top: 0;
+	border-bottom: var(--border) solid var(--lightgrey);
+
+	&-toggle {
+		display: none; // hidden on desktop by default
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: none;
+		background: transparent;
+		padding: 0;
+		cursor: pointer;
+		outline: none; // remove weird button styles
+
+		// 3 bars: top (::before), middle (span), bottom (::after)
+		&:before,
+		&:after,
+		& span {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: var(--white);
+			border-radius: 999px;
+			transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		& span {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+		@include respond-to("mobile") {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&-logo {
+		& svg {
+			height: 27px;
+			width: auto;
+
+			@include respond-to("mobile") {
+				height: 20px;
+			}
+		}
+	}
+
+	&-links {
+		gap: var(--gap-md);
+
+		& .active {
+			color: var(--primary);
+			opacity: 0.6;
+			pointer-events: none;
+			position: relative;
+
+			&:before{
+				@include respond-to("mobile") {
+					content: "";
+					width: 8px;
+					height: 8px;
+					margin-right: var(--gap-xs);
+					display: inline-block;
+					border-radius: var(--radius-lg);
+					position: relative;
+					background: var(--primary);
+				}
+			}
+
+			&:after {
+				content: "";
+				width: 110%;
+				height: 2px;
+				display: inline-block;
+				position: absolute;
+				top: 30%;
+				bottom: 50%;
+				left: -5%;
+				background: var(--primary);
+
+				@include respond-to("tablet") {
+					top: 25%;
+				}
+
+				@include respond-to("mobile") {
+					display: none;
+				}
+			}
+		}
+
+		@include respond-to("mobile") {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			left: 0;
+			background: var(--darkgrey);
+			border-bottom: var(--border) solid var(--lightgrey);
+			padding: 0;
+			flex-direction: column;
+			gap: 0;
+			height: 0; // hidden by default on mobile
+			overflow: hidden;
+			transition: 1s ease;
+
+			& a{
+				padding-block: var(--padding-xl);
+				border-bottom: var(--border) solid var(--lightgrey);
+
+				&:last-of-type{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+
+	// Transform into "X" when navbar is open
+	&.is-open {
+
+		& .navbar{
+			&-toggle {
+				&:before {
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				& span {
+					opacity: 0;
+				}
+
+				&:after {
+					bottom: 50%;
+					transform: translateY(50%) rotate(-45deg);
+				}
+			}
+
+			&-links {
+				@include respond-to("mobile") {
+					height: auto;
+					padding: var(--padding-xxl) var(--padding-xl-2);
+				}
+			}
+		}
+	}
+}

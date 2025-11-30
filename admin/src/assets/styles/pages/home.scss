@@ -1,0 +1,77 @@
+@use '../variables/breakpoints' as *;
+
+.home{
+	& .hero{
+		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../images/hero.webp");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		padding: var(--padding-body) var(--padding-xl-2) var(--padding-xl);
+
+		@include respond-to("tablet") {
+			flex-direction: column;
+			justify-content: end;
+			align-items: start;
+			min-height: 50vh;
+		}
+
+		@include respond-to("mobile") {
+			flex-direction: column;
+			justify-content: end;
+			align-items: start;
+			min-height: 72vh;
+			background-position: left center;
+		}
+
+		&-content{
+			max-width: 70%;
+			gap: var(--gap-xxs);
+
+			@include respond-to("tablet") {
+				max-width: 80%;
+			}
+
+			@include respond-to("mobile") {
+				max-width: 100%;
+			}
+		}
+
+		& .button{
+			margin-bottom: var(--padding-sm);
+		}
+
+	}
+
+	& .sectors-list {
+		width: 100%;
+		gap: var(--gap-sm);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+
+		@include respond-to("tablet") {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include respond-to("mobile") {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
+
+	& .commitment, & .testimonials{
+		& .content{
+			gap: var(--gap-sm);
+		}
+		& .notice{
+			color: var(--primary);
+			text-decoration: underline;
+		}
+	}
+
+	& .testimonials{
+		padding-inline: 0;
+
+		& .title, & .content.grid{
+			padding-inline: var(--padding-xl-2);
+		}
+	}
+
+}

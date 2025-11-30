@@ -1,11 +1,9 @@
-// admin/src/pages/PartnerForm.jsx
-
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
 
-import Button from "../../../src/components/Button.jsx";
-import InputComponent from "../../../src/components/InputComponent.jsx";
+import Button from "../components/Button";
+import InputComponent from "../components/InputComponent";
 
 const BUCKET = "partner-logos";
 

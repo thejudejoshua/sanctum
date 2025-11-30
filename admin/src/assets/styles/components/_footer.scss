@@ -1,0 +1,134 @@
+@use '../variables/breakpoints' as *;
+
+.newsletter{
+	&-background-element{
+		position: absolute;
+		top: unset;
+		bottom: 0;
+		opacity: 0.7;
+		left: -16%;
+	}
+
+	&-data{
+		width: 72%;
+		gap: var(--gap-xl);
+
+		@include respond-to("tablet") {
+			width: 80%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
+		& form{
+			flex-direction: row;
+			gap: var(--gap-xxs);
+			width: 72%;
+
+			@include respond-to("mobile") {
+				flex-direction: column;
+				width: 100%;
+			}
+
+			& button{
+				@include respond-to("mobile") {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	gap: var(--gap-xl);
+	padding-bottom: var(--padding-xl-2);
+
+	&-info{
+		&-logo{
+			& svg{
+				height: 27px;
+				width: auto;
+
+				@include respond-to("tablet") {
+					height: 20px;
+				}
+
+				@include respond-to("mobile") {
+					height: 16px;
+				}
+			}
+		}
+
+		@include respond-to("tablet") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-xl);
+		}
+
+		@include respond-to("mobile") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-2xl);
+		}
+	}
+	&-links{
+		gap: var(--gap-md);
+
+		@include respond-to("tablet") {
+			width: 100%;
+		}
+
+		@include respond-to("mobile") {
+			width: 100%;
+		}
+
+		&-list-holder{
+			gap: var(--gap-xl);
+
+			@include respond-to("tablet") {
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			@include respond-to("mobile") {
+				width: 100%;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: var(--gap-md);
+			}
+
+			& .links-list{
+				gap: var(--gap-md);
+				justify-content: space-between;
+
+				&:last-of-type{
+					@include respond-to("mobile") {
+						flex-direction: row;
+						gap: var(--gap-xl);
+					}
+				}
+			}
+		}
+	}
+
+	& .copyright{
+		padding-top: var(--padding-xl-2);
+		border-top: var(--border) solid var(--lightgrey);
+
+		@include respond-to("mobile") {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: var(--gap-xl);
+		}
+
+		&-text{
+			& .t-highlights{
+				color: var(--white);
+			}
+		}
+	}
+}

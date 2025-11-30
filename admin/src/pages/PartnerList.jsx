@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
-import Button from "../../../src/components/Button.jsx";
+import Button from "../components/Button";
 
 const BUCKET = "team-avatars";
 

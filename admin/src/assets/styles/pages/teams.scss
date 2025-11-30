@@ -1,0 +1,52 @@
+@use '../variables/breakpoints' as *;
+
+.team{
+	&-container{
+		gap: var(--gap-xl);
+	}
+
+	&-grid{
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--gap-sm);
+
+		@include respond-to("tablet") {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include respond-to("mobile") {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
+
+	&-member{
+		&-image{
+			min-height: 320px;
+			height: 320px;
+			width: 100%;
+
+			& img{
+				height: 100%;
+				width: 100%;
+			}
+		}
+		&-card{
+			gap: var(--gap-xs);
+			padding-bottom: var(--padding-lg);
+			background-color: var(--darkgrey);
+			width: 100%;
+		}
+
+		&-info{
+			gap: var(--gap-sm);
+			padding-inline: var(--padding-md);
+		}
+
+		&-socials{
+			gap: var(--gap-xs);
+
+			& a{
+				padding: 0;
+			}
+		}
+	}
+}

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
 import { useAuth } from "../context/AuthContext";
-import Button from "../../../src/components/Button.jsx";
-import InputComponent from "../../../src/components/InputComponent.jsx";
+import Button from "../components/Button";
+import InputComponent from "../components/InputComponent";
 
 export default function Login() {
 	const { user, loading } = useAuth();

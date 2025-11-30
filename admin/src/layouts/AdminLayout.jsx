@@ -1,8 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
-import Button from "../../../src/components/Button.jsx";
+import Button from "../components/Button";
 
-import Logo from "../../../src/assets/images/logo-default.svg?react"; // reuse same logo
+import Logo from "../assets/images/logo-default.svg?react"; // reuse same logo
 
 export default function AdminLayout({ children }) {
 	const navigate = useNavigate();

@@ -1,0 +1,59 @@
+@use '../variables/breakpoints' as *;
+
+.contact{
+	&-info {
+		gap: var(--gap-2xl);
+		width: 100%;
+
+		@include respond-to("tablet") {
+			flex-direction: column;
+		}
+
+		@include respond-to("mobile") {
+			flex-direction: column;
+		}
+
+		& .form {
+			& .button {
+				width: 100%;
+			}
+		}
+
+		&-data{
+			gap: var(--gap-xl);
+			width: 44%;
+
+			@include respond-to("tablet") {
+				width: 100%;
+			}
+
+			@include respond-to("mobile") {
+				width: 100%;
+			}
+
+			& .t-highlights{
+				color: var(--white);
+			}
+
+			&-details{
+				gap: var(--gap-sm);
+
+				& .label{
+					color: var(--lightgrey);
+				}
+			}
+		}
+	}
+
+	& .content-card{
+		&.quote{
+			@include respond-to("tablet") {
+				width: 100%;
+			}
+
+			@include respond-to("mobile") {
+				width: 100%;
+			}
+		}
+	}
+}

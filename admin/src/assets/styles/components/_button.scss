@@ -1,0 +1,76 @@
+.button{
+	gap: var(--gap-xxs);
+	padding: var(--padding-button) var(--padding-lg);
+	font-weight: 600 !important;
+	text-wrap: nowrap;
+	width: fit-content;
+	cursor: pointer;
+	overflow: hidden;
+	transition: background-color .3s ease, border-color .3s ease;
+
+	span {
+		display: inline-block;
+		transition: transform .45s cubic-bezier(0.4, 0.2, 0.2, 1),
+		opacity .35s ease;
+		will-change: transform, opacity;
+	}
+
+	&:hover {
+		span {
+			animation: fly-up 0.45s cubic-bezier(0.4, 0.2, 0.2, 1);
+		}
+
+		svg{
+			animation: fly-up 0.45s cubic-bezier(0.4, 0.2, 0.2, 1);
+			animation-direction: reverse;
+		}
+	}
+
+	&.primary{
+		background: var(--primary);
+		color: var(--black);
+
+		&:hover{
+			background: var(--secondary);
+			color: var(--white);
+		}
+	}
+
+	&.secondary{
+		border: var(--border) solid var(--white);
+		background: var(--black);
+		color: var(--white);
+	}
+
+	&.tertiary{
+		padding: 0;
+
+		&:hover{
+			color: var(--secondary);
+		}
+	}
+
+	& svg{
+		font-size: 1.1rem;
+	}
+}
+
+
+@keyframes fly-up {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	40% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	41% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

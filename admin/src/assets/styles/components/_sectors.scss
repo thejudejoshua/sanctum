@@ -1,0 +1,35 @@
+@use '../variables/breakpoints' as *;
+
+.sector-card{
+	background-color: var(--black) !important;
+	background-image: radial-gradient(circle, var(--sector-white-pattern) 1.5px, transparent 1.5px) !important;
+	background-size: 15px 15px !important;
+	border: var(--border) solid var(--lightgrey);
+	background-blend-mode: unset !important;
+	background-position: center !important;
+	background-repeat: unset !important;
+	gap: var(--gap-md) !important;
+	padding: var(--padding-xxxl) var(--padding-lg) var(--padding-xl) !important;
+	height: fit-content;
+
+	&-icon{
+		width: auto !important;
+		height: 144px !important;
+
+		@include respond-to("tablet") {
+			height: 128px !important;
+		}
+
+		@include respond-to("mobile") {
+			height: 104px !important;
+		}
+	}
+
+	&-highlight {
+		position: absolute;
+		top: 8%;
+		left: unset;
+		right: 0;
+		padding-inline: var(--padding-xs);
+	}
+}

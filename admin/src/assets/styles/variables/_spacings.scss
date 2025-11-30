@@ -1,0 +1,148 @@
+@use 'breakpoints' as *;
+
+:root {
+	// =======================
+	// RESPONSIVENESS / CONTAINERS
+	// =======================
+	--container-width: 95.875rem;   // min 960px, preferred 95% viewport, max 1534px
+	--container-height: 69.8125rem; // min 640px, preferred 70% viewport, max 1117px
+
+	// =======================
+	// BORDER WEIGHT
+	// =======================
+	--border: 0.0625rem;    // ~1px thin border, responsive
+
+	// =======================
+	// GAPS / SPACING
+	// =======================
+	--gap-xxs: 0.5rem;   // 8px
+	--gap-xs: 1rem;        // 16px
+	--gap-sm: 1.5rem;    // 24px
+	--gap-md: 2rem;        // 32px
+	--gap-lg: 3rem;        // 48px
+	--gap-xl: 4rem;        // 64px
+	--gap-2xl: 5.5rem;   // 88px
+	--gap-3xl: 6.5rem;   // 104px
+	--gap-4xl: 7.5rem;   // 120px
+	--gap-5xl: 10rem;    // 160px
+
+	// =======================
+	// PADDINGS
+	// =======================
+	--padding-xs: 0.5rem;        // 8px
+	--padding-button: 0.75rem;  // 12px
+	--padding-sm: 1rem;            // 16px
+	--padding-md: 1.5rem;        // 24px
+	--padding-lg: 2rem;            // 32px
+	--padding-xl: 3rem;            // 48px
+	--padding-xl-2: 3.5rem;    // 56px
+	--padding-xxl: 4.5rem;     // 72px
+	--padding-xxxl: 6rem;          // 96px
+	--padding-section: 6.5rem;   // 104px
+	--padding-page: 8rem;         // 120px
+	--padding-body: 12.5rem;   // 200px
+
+	// =======================
+	// BORDER RADII
+	// =======================
+	--radius-sm: 1rem;
+	--radius-md: 2rem;
+	--radius-lg: 3rem;
+	--radius-xl: 8rem;
+	--radius-xxl: 30rem;
+}
+
+
+// =======================
+// TABLET (768px – 1023px)
+// =======================
+@include respond-to("tablet") {
+	:root {
+		// RESPONSIVENESS / CONTAINERS
+		// 834px x 1194px
+		--container-width: 52.125rem;
+		--container-height: 74.625rem;
+
+		--border: 0.0425rem;    // ~1px thin border, responsive
+
+		// GAPS  (mapped from button-inner / siblings / paragraph / has-button / card / title / group-parent / body-section / section-parent / main)
+		--gap-xxs: 0.5rem;   // 8px
+		--gap-xs: 1rem;      // 16px
+		--gap-sm: 1.5rem;    // 24px
+		--gap-md: 2rem;      // 32px
+		--gap-lg: 3rem;      // 48px
+		--gap-xl: 3.5rem;    // 56px
+		--gap-2xl: 4.5rem;   // 72px
+		--gap-3xl: 6rem;     // 96px  (body-section-gap)
+		--gap-4xl: 6.5rem;   // 104px (section-parent-gap)
+		--gap-5xl: 7.5rem;   // 120px (main-gap)
+
+		// PADDINGS  (aligned with your padding tokens)
+		--padding-xs: 0.5rem;        // 8px
+		--padding-button: 0.75rem;   // 12px
+		--padding-sm: 1rem;          // 16px  (padding-parent-small)
+		--padding-md: 1.5rem;        // 24px  (padding-parent-box)
+		--padding-lg: 2rem;          // 32px
+		--padding-xl: 3rem;          // 48px  (padding-card)
+		--padding-xl-2: 3.5rem;      // 56px
+		--padding-xxl: 4rem;         // 64px  (padding-inline)
+		--padding-xxxl: 6rem;        // 96px
+		--padding-section: 6.5rem;   // 104px (padding-block)
+		--padding-page: 6rem;        // 96px  (page-padding)
+		--padding-body: 10rem;       // 160px (padding-body)
+
+		// BORDER RADII  (cards-sm / cards / button / section-groups / section)
+		--radius-sm: 1rem;      // 16px
+		--radius-md: 1.5rem;    // 24px
+		--radius-lg: 3rem;      // 48px
+		--radius-xl: 6rem;      // 96px
+		--radius-xxl: 10rem;    // 160px
+	}
+}
+
+// =======================
+// MOBILE (<= 767px)
+// =======================
+@include respond-to("mobile") {
+	:root {
+		// RESPONSIVENESS / CONTAINERS
+		// 430px x 932px
+		--container-width: 26.875rem;
+		--container-height: 58.25rem;
+
+		--border: 0.0125rem;    // ~1px thin border, responsive
+
+		// GAPS  (mobile column from Figma)
+		--gap-xxs: 0.25rem;   // 4px  (button-inner-gap)
+		--gap-xs: 0.75rem;    // 12px (siblings-gap)
+		--gap-sm: 1rem;       // 16px (paragraph-gap)
+		--gap-md: 1.5rem;     // 24px (has-button-gap)
+		--gap-lg: 2rem;       // 32px (card-gap)
+		--gap-xl: 2.5rem;       // 48px (title-gap)
+		--gap-2xl: 3rem;      // 64px (group-parent-gap)
+		--gap-3xl: 3.5rem;      // 80px (body-section-gap)
+		--gap-4xl: 4rem;      // 48px (section-parent-gap)
+		--gap-5xl: 4.5rem;      // 80px (main-gap)
+
+		// PADDINGS  (mobile column from Figma)
+		--padding-xs: 0.5rem;       // 8px
+		--padding-button: 0.75rem;  // 12px
+		--padding-sm: 0.5rem;       // 8px  (padding-parent-small)
+		--padding-md: 1rem;         // 16px (padding-parent-box)
+		--padding-lg: 1.5rem;         // 32px (padding-card)
+		--padding-xl: 1.5rem;         // 32px
+		--padding-xl-2: 2rem;       // 48px (padding-inline)
+		--padding-xxl: 3rem;        // 48px
+		--padding-xxxl: 4rem;       // 64px
+		--padding-section: 5rem;    // 64px (padding-block)
+		--padding-page: 2.5rem;     // 40px (page-padding)
+		--padding-body: 6.5rem;     // 104px (padding-body)
+
+		// BORDER RADII  (mobile column from Figma)
+		--radius-sm: 0.75rem;   // 12px (cards-sm)
+		--radius-md: 1rem;      // 16px (cards)
+		--radius-lg: 2.5rem;    // 40px (button)
+		--radius-xl: 4rem;      // 64px (section-groups)
+		--radius-xxl: 6rem;     // 96px (section)
+	}
+}

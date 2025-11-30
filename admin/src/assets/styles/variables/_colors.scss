@@ -1,0 +1,44 @@
+:root {
+	--color: #55c702;
+	--color-2: #5acae3;
+	--action: #6e1da9;
+	--complimentary: #ce0e17;
+
+	--black: #010101;
+	--darkgrey: #0e0e0e;
+	--lightgrey: #7f7f70;
+	--white: #fffaeb;
+	--sector-white-pattern: rgba(255, 250, 235, 0.08);
+
+	--primary: #ffc309;
+	--secondary: #ff7901;
+}
+
+.agriculture{
+	color: var(--black);
+	background-color: var(--color);
+}
+.finance{
+	color: var(--black);
+	background-color: var(--color-2);
+}
+.productdevelopment{
+	color: var(--black);
+	background-color: var(--lightgrey);
+}
+.realestate{
+	color: var(--white);
+	background-color: var(--action);
+}
+.fashion{
+	color: var(--white);
+	background-color: var(--complimentary);
+}
+.technology{
+	color: var(--black);
+	background-color: var(--secondary);
+}
+.sanctum{
+	color: var(--black);
+	background-color: var(--primary);
+}
