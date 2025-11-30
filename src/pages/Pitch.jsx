@@ -87,9 +87,9 @@ export default function Pitch() {
 						{ required: true, name: 'company', type: 'text', placeholder: 'What\'s your Company Name?' },
 						{ required: true, name: 'name', type: 'text', placeholder: 'How about your name?' },
 						{ required: true, name: 'email', type: 'email', placeholder: 'What\'s your email address?' },
-						{ required: true, name: 'industry', type: 'datalist', list:'industry', placeholder: 'Please enter your Industry', options: ['Agriculture', 'Finance', 'Fashion', 'Technology', 'Real Estate', 'Product Development'] },
+						{ required: true, name: 'industry', type: 'select', placeholder: 'Please select your Industry', options: ['Agriculture', 'Finance', 'Fashion', 'Technology', 'Real Estate', 'Product Development'] },
 						{ required: true, name: 'solution', type: 'textarea', placeholder: 'What problem are you solving? How is your solution different? Why are you the right team to build this?' },
-						{ required: true, name: 'funding', type: 'datalist', list:'funding', placeholder: 'Please enter your required funding amount?', options: ['$10,000 - $50,000', '$50,000 - $100,000', '$100,000 - $500,000', '$500,000+'] },
+						{ required: true, name: 'funding', type: 'select', placeholder: 'Please select your required funding amount?', options: ['$10,000 - $50,000', '$50,000 - $100,000', '$100,000 - $500,000', '$500,000+'] },
 						{ required: false, name: 'website', type: 'url', placeholder: 'Now enter a link to your website or demo' },
 					]}
 					formKey={"mzzlkkgy"}

@@ -27,7 +27,7 @@ export default function Team() {
 		try {
 			const { data, error: err } = await supabase
 				.from("TeamMembers")
-				.select("id, name, role, linkedin, twitter, email")
+				.select("id, name, role, linkedin, twitter, email, avatar_url")
 				.order("id", { ascending: true });
 			
 			if (err) {
@@ -43,9 +43,6 @@ export default function Team() {
 			setLoading(false);
 		}
 	};
-	
-	console.log(teamMembers);
-	
 	
 	return (
 		<>
@@ -72,7 +69,7 @@ export default function Team() {
 									{teamMembers.map((member) => (
 										<div key={member.id} className="team-member-card flex flex-col justify-start items-start">
 											<div className="team-member-image">
-												<ImageComponent src={`/images/team/${(member.name).toLowerCase().replace(/\s+/g, "")}.jpg`} alt={member.author} className=""/>
+												<ImageComponent src={member.avatar_url} alt={member.author} className=""/>
 											</div>
 											
 											<div className="team-member-info flex flex-col justify-start items-start">

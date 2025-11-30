@@ -30,7 +30,7 @@ export default function Contact() {
 					<div className='contact-info flex flex-row items-start justify-start'>
 						<FormComponent
 							input={[
-								{ required: true, name: 'subject', list: 'subject', type: 'datalist', placeholder: 'What would you like to talk about?', options: ['Investment Options', 'Pitch an Idea', 'General message'] },
+								{ required: true, name: 'subject', type: 'select', placeholder: 'What would you like to talk about?', options: ['Investment Options', 'Pitch an Idea', 'General message'] },
 								{ required: true, name: 'name', type: 'text', placeholder: 'What should we call you?' },
 								{ required: false, name: 'company', type: 'text', placeholder: 'Do you have a company name?' },
 								{ required: true, name: 'email', type: 'email', placeholder: 'How about your email address?' },

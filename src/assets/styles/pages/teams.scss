@@ -21,9 +21,12 @@
 	&-member{
 		&-image{
 			min-height: 320px;
+			height: 320px;
+			width: 100%;
 
 			& img{
 				height: 100%;
+				width: 100%;
 			}
 		}
 		&-card{

@@ -83,7 +83,7 @@ export default function Portfolio() {
 									<div key={partner.id} className="partner-list-card flex flex-col col-span-1 items-start">
 										{/* Partner logo */}
 										<ImageComponent
-											src={`/images/portfolio/${(partner.name).toLowerCase().replace(/\s+/g, "")}/${partner.partner_image}`}
+											src={`${partner.partner_image}`}
 											alt={`${partner.name} logo`}
 											className="partner-logo"
 										/>

@@ -49,7 +49,7 @@ export default function Testimonials({ id = null }) {
 						</p>
 						<div className={'testifier flex flex-row items-center justify-center'}>
 							<div className={'testifier-image'}>
-								<ImageComponent src={`/images/testimonials/${data.image}`} alt={data.author} className=""/>
+								<ImageComponent src={`${data.image}`} alt={data.author} className=""/>
 							</div>
 							<p className='t-copy user'>
 								<span>{data.author}</span>
@@ -83,7 +83,7 @@ export default function Testimonials({ id = null }) {
 								</p>
 								<div className={'testifier flex flex-row items-center justify-center'}>
 									<div className={'testifier-image'}>
-										<ImageComponent src={`/images/testimonials/${testimonial.image}`} alt={testimonial.author} className=""/>
+										<ImageComponent src={`${testimonial.image}`} alt={testimonial.author} className=""/>
 									</div>
 									<p className='t-copy user'>
 										<span>{testimonial.author}</span>

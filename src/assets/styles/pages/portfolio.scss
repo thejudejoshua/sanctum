@@ -37,6 +37,7 @@
 			padding: var(--padding-lg);
 			gap: var(--gap-xl);
 			overflow: hidden;
+			justify-content: space-between;
 
 			& .partner-logo{
 				height: 32px;

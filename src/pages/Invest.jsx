@@ -107,8 +107,8 @@ export default function Invest() {
 							{ required: true, type: 'text', name: 'name', placeholder: 'What\'s your full name?' },
 							{ required: true, type: 'email', name: 'email', placeholder: 'What\'s your email address?' },
 							{ required: true, type: 'text', name: 'company', placeholder: 'How about your Company (Organization) Name?' },
-							{ required: true, type: 'datalist', list: 'funding', name: 'funding_amount', placeholder: 'Please enter your required funding amount?', options: ['$10,000 - $50,000', '$50,000 - $100,000', '$100,000 - $500,000', '$500,000+'] },
-							{ required: true, type: 'datalist', list: 'industry', name: 'industry', placeholder: 'Please enter your Industry', options: ['Agriculture', 'Finance', 'Fashion', 'Technology', 'Real Estate', 'Product Development'] },
+							{ required: true, type: 'select', name: 'funding_amount', placeholder: 'Please select your required funding amount?', options: ['$10,000 - $50,000', '$50,000 - $100,000', '$100,000 - $500,000', '$500,000+'] },
+							{ required: true, type: 'select', name: 'industry', placeholder: 'Please select your Industry', options: ['Agriculture', 'Finance', 'Fashion', 'Technology', 'Real Estate', 'Product Development'] },
 							{ required: true, type: 'textarea', name: 'investment_why', placeholder: 'What excites you about investing in African ventures?' },
 						]}
 						formKey={"xwpdrgbj"}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Core pages -->
+    <url>
+        <loc>https://sanctumafrica.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/portfolio</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/invest</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/pitch</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/team</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <!-- Resources / reports -->
+    <url>
+        <loc>https://sanctumafrica.com/reports</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/resources</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <!-- Legal pages -->
+    <url>
+        <loc>https://sanctumafrica.com/privacy-policy</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/cookie-policy</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+    <url>
+        <loc>https://sanctumafrica.com/terms-of-use</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <lastmod>2025-11-28</lastmod>
+    </url>
+
+</urlset>

@@ -51,15 +51,16 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--black);
-}
-
-::-webkit-scrollbar-thumb {
 	background: var(--darkgrey);
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb {
 	background: var(--lightgrey);
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--darkgrey);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -86,6 +87,15 @@ html, body {
 	overflow-x: hidden;
 }
 
+select option {
+	background: var(--black);
+	color: var(--white);
+
+	&:hover{
+		background: var(--darkgrey);
+		color: var(--black);
+	}
+}
 
 .h1 {
 	@include type.h1;
@@ -132,4 +142,8 @@ html, body {
 
 .t-pending{
 	color: var(--secondary);
+}
+
+.t-disabled{
+	color: var(--lightgrey);
 }

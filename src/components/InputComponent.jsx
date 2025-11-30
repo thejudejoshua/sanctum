@@ -1,24 +1,23 @@
-export default function InputComponent({ required, type, placeholder, options, name, list}) {
+export default function InputComponent({ required, type, placeholder, options, name, ...props}) {
 	
-	if (type === 'datalist') {
+	if (type === 'select') {
 		return (
 			<>
-				<input
-					type={type}
+				<select
 					name={name}
 					placeholder={placeholder}
 					className="t-links t-copy"
-					list={list}
 					required={required}
-				/>
-				<datalist className="t-links t-copy" id={list}>
-					<option value="">{placeholder}</option>
+					{...props}
+					defaultValue={placeholder}
+				>
+					<option disabled className='t-disabled'>{placeholder}</option>
 					{options?.map((option, index) => (
 						<option key={index} value={option}>
 							{option}
 						</option>
 					))}
-				</datalist>
+				</select>
 			</>
 		);
 	}
@@ -30,6 +29,7 @@ export default function InputComponent({ required, type, placeholder, options, n
 				className="t-links t-copy"
 				required={required}
 				name={name}
+				{...props}
 			/>
 		);
 	}
@@ -41,6 +41,7 @@ export default function InputComponent({ required, type, placeholder, options, n
 			placeholder={placeholder}
 			className="t-links t-copy"
 			required={required}
+			{...props}
 		/>
 	);
 }
