@@ -85,7 +85,7 @@ export default function Home() {
 						<Quote/>
 						<div className='content-card-body flex flex-col justify-start items-start'>
 							<p className='h6'>
-								We do this by joining Africaʼs leading catalyst for sustainable growth by building, funding, and scaling companies and creative ventures that redefine industries and transform communities.
+								Africa's future generation of entrepreneurs will not only participate in but also shape the global economy. We support the founders as they develop solutions at the African scale, with African understanding, for global effect. Our continent's future belongs to those who are brave enough to construct it.
 							</p>
 							<p className='t-copy user'>
 								<span>Joey Stanley</span>
