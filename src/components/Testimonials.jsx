@@ -41,7 +41,7 @@ export default function Testimonials({ id = null }) {
 	if (id) {
 		return (
 			data && (
-				<div key={data.id} className="content-card quote flex flex-col justify-between items-start">
+				<div key={data.id} className="content-card col-span-3 quote flex flex-col justify-between items-start">
 					<Quote/>
 					<div className='content-card-body flex flex-col justify-start items-start'>
 						<p className='h6'>

@@ -15,8 +15,8 @@ export default function Contact() {
 					<BreadCrumbs/>
 					<h1 className="h2">We’re always open to new partnerships, ventures, and conversations that move
 						Africa forward.</h1>
-					<div className="content grid grid-cols-5 justify-between items-start">
-						<div className="col-span-3">
+					<div className="content grid grid-cols-7 justify-between items-start">
+						<div className="col-span-4">
 							<ImageComponent src={ContactTestimonialImage} width="auto" alt="mission" className={'object-left'} />
 						</div>
 						<Testimonials id={4}/>

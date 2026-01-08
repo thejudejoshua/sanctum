@@ -77,11 +77,11 @@ export default function Home() {
 				<div className="content sectors-list grid justify-start items-start">
 					<Sectors/>
 				</div>
-				<div className="content grid grid-cols-5 justify-between items-start">
+				<div className="content grid grid-cols-6 justify-between items-start">
 					<div className="col-span-3">
 						<ImageComponent src={FounderImage} width="auto" alt="mission" />
 					</div>
-					<div className="content-card flex flex-col col-span-2 justify-between items-start">
+					<div className="content-card flex flex-col col-span-3 justify-between items-start">
 						<Quote/>
 						<div className='content-card-body flex flex-col justify-start items-start'>
 							<p className='h6'>
